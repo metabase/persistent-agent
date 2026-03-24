@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+dir="$(dirname "$0")/../tasks/inbox"
+file="$dir/$(date -u +%Y-%m-%d_%H-%M-%S).md"
+
+if [ $# -eq 0 ]; then
+  echo "Usage: pa-later <text>" >&2
+  exit 1
+fi
+
+echo "$*" > "$file"
+echo "Saved to $file"

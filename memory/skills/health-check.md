@@ -1,0 +1,12 @@
+Make sure that:
+- you have access to the tools in @memory/company.md using the method listed as `Agent access`
+  - run `claude mcp list` for mcp tool status
+  - if not, prompt the user to connect, giving them instructions about the commands they should run
+  - for mcps the user should use `/mcp` to manage them
+- principal and company information relevant to them is filled in from Notion
+  - if not, prompt for the principal's identity and fill it in
+  - also ask if there's any additional repositories to add to the list
+- files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
+  - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
+  - create or update if not
+

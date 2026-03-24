@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root="$(dirname "$0")/../tasks"
+
+for folder in inbox in-progress outbox; do
+  dir="$root/$folder"
+  count=0
+  items=""
+
+  for f in "$dir"/*.md; do
+    [ -f "$f" ] || continue
+    name=$(head -1 "$f" | sed 's/^#* *//')
+    items+="  $(basename "$f")  $name"$'\n'
+    ((count++))
+  done
+
+  echo "$folder ($count)"
+  if [ -n "$items" ]; then
+    printf "%s" "$items"
+  fi
+done

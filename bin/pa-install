@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BIN_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+add_to_shell() {
+  local file="$1"
+  local line="$2"
+
+  if [ -f "$file" ] && grep -qF "$line" "$file"; then
+    echo "Already in $file"
+  else
+    echo >> "$file"
+    echo "$line" >> "$file"
+    echo "Added to $file"
+  fi
+}
+
+case "$(basename "$SHELL")" in
+  bash) add_to_shell "$HOME/.bashrc" "export PATH=\"$BIN_DIR:\$PATH\"" ;;
+  zsh)  add_to_shell "$HOME/.zshrc" "export PATH=\"$BIN_DIR:\$PATH\"" ;;
+  fish) add_to_shell "$HOME/.config/fish/config.fish" "fish_add_path $BIN_DIR" ;;
+  *)    echo "Unsupported shell: $SHELL" >&2; exit 1 ;;
+esac
+
+echo "Done. Restart your shell or source the relevant config file."

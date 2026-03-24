@@ -1,0 +1,41 @@
+{
+  "enabledPlugins": {
+    "slack@claude-plugins-official": true,
+    "linear@claude-plugins-official": true,
+    "notion@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "obsidian@obsidian-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "obsidian-skills": {
+      "source": {
+        "source": "github",
+        "repo": "kepano/obsidian-skills"
+      }
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Read(memory/**)",
+      "Edit(memory/**)",
+      "Bash(rm memory/**)",
+      "Read(tasks/**)",
+      "Edit(tasks/**)",
+      "Bash(rm tasks/**)",
+      "mcp__plugin_Notion_notion__notion-search",
+      "mcp__plugin_Notion_notion__notion-fetch",
+      "mcp__plugin_Notion_notion__notion-get-users",
+      "mcp__plugin_linear_linear__list_issues",
+      "mcp__plugin_linear_linear__list_issue_statuses",
+      "mcp__plugin_linear_linear__list_projects",
+      "mcp__plugin_linear_linear__get_issue",
+      "mcp__plugin_slack_slack__slack_search_channels",
+      "mcp__plugin_slack_slack__slack_send_message_draft",
+      "mcp__plugin_slack_slack__slack_read_thread",
+      "Bash(claude mcp list)",
+      "Bash(gh auth status)",
+      "Bash(gh pr list:*)",
+      "Bash(gh search:*)"
+    ]
+  }
+}
