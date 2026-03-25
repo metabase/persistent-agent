@@ -15,6 +15,9 @@
     }
   },
   "permissions": {
+    "deny": [
+      "Bash(cd workspace/*)"
+    ],
     "allow": [
       "Read(memory/**)",
       "Read(workspace/**)",
@@ -30,6 +33,7 @@
       "Bash(scripts/workspace-cmd * ls *)",
       "Bash(scripts/workspace-cmd * find *)",
       "Bash(scripts/workspace-cmd * head *)",
+      "Bash(scripts/workspace-cmd * grep *)",
       "Bash(scripts/workspace-cmd * curl *)",
       "Bash(scripts/workspace-cmd * gh pr *)",
       "Bash(scripts/workspace-cmd * pwd)",
@@ -62,6 +66,7 @@
       "mcp__plugin_linear_linear__list_cycles",
       "mcp__plugin_linear_linear__search_documentation",
       "mcp__plugin_linear_linear__list_milestones",
+      "mcp__plugin_linear_linear__list_users",
       "Bash(ls *)",
       "Bash(cat *)",
       "Bash(find *)",
@@ -72,6 +77,7 @@
       "Bash(gh search *)",
       "Bash(gh repo clone *)",
       "Bash(gh repo view *)",
+      "Bash(gh repo list *)",
       "Bash(defuddle parse *)"
     ]
   }

@@ -9,6 +9,18 @@ Persistent agent, or `pa`, is a claude-based agent memory and task system that a
 
 You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quickstart) installed. Then run `bin/pa install` to add `pa` to your global `$PATH`, and run `pa setup <your name>` to perform first-time user setup and connectivity check.
 
+
+## Getting started
+
+Run `pa sod`, or just say `sod` on a existing session (`pa <anything>` will just start `pa` with `<anything>` as prompt).
+`pa` will propose a day plan, ask you if you want to send the start-of-day draft, and save a daily note.
+
+Pick a couple of your tasks and tell `pa` to add them to your inbox.
+Then say `batch` to start batch processing them.
+`pa` will try to be as independent as possible and stop when it can't progress.
+Ask about blockers and clear them, then say `batch` again to continue autonomously.
+
+
 ## Workspace
 
 `pa` will clone repositories inside of `workspace`.
@@ -24,6 +36,7 @@ Files in that directory are ignored by git when updating this repository.
 `pa batch` will attempt to process tasks autonomously in batch.
 
 Batch processing tries to be as autonomous as possible. When there's a blocker or a plan that requires review, `pa` will move the task to `blocked` so it waits for the next time you are around. When a task seems fully done it will be in `outbox`.
+
 
 ## Memory
 
