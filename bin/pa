@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")/.." || exit 1
+
+if [ $# -lt 5 ]; then
+  script="$(dirname "$0")/pa-$(IFS=-; echo "$*")"
+  if [ -x "$script" ]; then
+    exec "$script"
+  fi
+fi
+
 claude "$*"

@@ -5,7 +5,7 @@ Make sure that:
   - for mcps the user should use `/mcp` to manage them
 - principal and company information relevant to them is filled in from Notion
   - if not, prompt for the principal's identity and fill it in
-  - also ask if there's any additional repositories to add to the list
+- ask the user what repositories should be part of their workspace
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create or update if not

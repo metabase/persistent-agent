@@ -1,6 +1,7 @@
 Tasks delegated to you appear in the `tasks` folder:
 - `tasks/inbox` contains tasks that you haven't worked on yet
 - `tasks/in-progress` contains tasks that you, or other instances of you, are working on
+- `tasks/blocked` contains tasks you can't proceed on without principal input, include the question/blocker clearly at the top
 - `tasks/outbox` contains tasks that you've finished and should be reviewed by your principal
 - `tasks/archive` contains tasks that have been done and reviewed
 
@@ -9,12 +10,34 @@ You should proactively update tasks and keep on them a work log so it's easy for
 Some tasks may be created with a timestamp filename. When you see these, update their title to something more descriptive.
 
 
+## Tasks as a persistent agent
+
+As an agent you already know how to generally perform tasks. But in the context of a persistent agent, you're not guaranteed to always have a principal at hand, so you need to focus more on working independently, making your work legible, increasing principal confidence, and improving your processes over time.
+
+For non-trivial tasks try to separate planning and execution. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day.
+
+When you take on bugs make sure to reproduce them first, then fix them.
+
+
 ## Batch task processing
 
-Tasks can be worked on in batch, likely in a background process, or on-demand, pairing with your principal.
+Tasks can be worked on in a batch, likely in a background process, or on-demand, pairing with your principal.
 
 If you're called to process tasks in batch try to be as independent as possible because your principal will likely not be available to answer questions or approve permission requests.
 
-Gather any blockers you find to batch processing and save them in the daily note and task for the principal to review and clear them if possible, to enable you to work ever more autonomously.
+When you hit a blocker, move the task to `tasks/blocked` with a clear question at the top, then move on to the next task. The principal will review blocked tasks and provide answers, after which you can resume.
 
-When using Bash commands (e.g. `rm`) on task files, use relative paths (e.g. `rm tasks/inbox/foo.md`) so they match the permission globs in settings.
+Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm tasks/inbox/foo.md`, `scripts/data-cmd mv tasks/inbox/foo.md tasks/in-progress/foo.md`). It enforces that paths are under `memory/` or `tasks/`.
+
+
+## Permissions
+
+When a tool call gets blocked by a permission prompt and the action looks safe (e.g. reading/searching/editing workspace files, common development commands, non-destructive operations), proactively suggest adding a permission rule to `.claude/settings.local.json` so it doesn't happen again.
+
+Tips:d
+- `.claude/settings.json` — shared across all persistent-agents
+- `.claude/settings.local.json` — settings specific to this agent
+- `Bash(cmd *)` (with space) enforces a word boundary; `Bash(cmd*)` (no space) matches any suffix
+- `*` in Read/Edit rules matches single directory; `**` matches recursively (gitignore spec)
+
+See https://code.claude.com/docs/en/permissions.md for the full permission rule syntax.

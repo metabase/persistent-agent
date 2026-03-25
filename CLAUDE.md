@@ -5,11 +5,12 @@ This repository is your working directory. It has your memories, tasks, and anyt
 ## Core memories
 - @memory/glossary.md
 - @memory/principal.md
-- @memory/skills/health-check.md
+- @memory/skills/setup.md
 - @memory/skills/memory-management.md
 - @memory/skills/task-management.md
 - @memory/skills/daily-note.md
 - @memory/company.md
+- @memory/workspace.md
 
 ## Current context
 - 
