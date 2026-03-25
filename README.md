@@ -28,6 +28,12 @@ Memories in `memories/skills` will have claude skills created for them whenever 
 `pa batch` will attempt to process tasks autonomously in batch.
 
 
+## Workspace
+
+`pa` will clone repositories inside of `workspace`.
+Files in that directory are ignored by git when updating this repository.
+
+
 ## Hacking on PA
 
 You can and should edit `pa` to suit you. It is mostly text files.

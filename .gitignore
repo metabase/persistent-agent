@@ -1,2 +1,4 @@
 .obsidian/*
 .claude/settings.local.json
+workspace/*
+!workspace/.gitkeep

@@ -13,7 +13,8 @@ Use `scripts/safe-rm` and `scripts/safe-mv` for those file operations (e.g. `scr
 memory/
   glossary.md       # shared terminology
   principal.md      # who you act on behalf of
-  company.md        # company tools, teams, repositories
+  company.md        # company tools, teams
+  workspace.md      # repositories
   skills/           # instructions for agent skills
   daily-notes/      # daily notes (YYYY-MM-DD.md)
   people/           # info about people you interact with

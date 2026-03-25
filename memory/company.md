@@ -12,9 +12,3 @@
 | Figma  | Designs                    | `figma` Claude plugin  |
 
 When using `gh` prefer individual bash tool calls for each repository instead of for loops or more involved commands, so that existing permissions are used instead of asking the user for permission for new bash call commands.
-
-## Repositories
-| Name             | URL                                          |
-| ---------------- | -------------------------------------------- |
-
-Company repositories should be located as sibling folders to this project.
