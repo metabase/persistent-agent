@@ -25,10 +25,10 @@ Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm tasks/inbo
 
 When a tool call gets blocked by a permission prompt and the action looks safe (e.g. reading/searching/editing workspace files, common development commands, non-destructive operations), proactively suggest adding a permission rule to `.claude/settings.local.json` so it doesn't happen again.
 
-See https://code.claude.com/docs/en/permissions.md for the full permission rule syntax.
-
-Key points:
+Tips:
 - `.claude/settings.json` — shared across all persistent-agents
 - `.claude/settings.local.json` — settings specific to this agent
 - `Bash(cmd *)` (with space) enforces a word boundary; `Bash(cmd*)` (no space) matches any suffix
 - `*` in Read/Edit rules matches single directory; `**` matches recursively (gitignore spec)
+
+See https://code.claude.com/docs/en/permissions.md for the full permission rule syntax.
