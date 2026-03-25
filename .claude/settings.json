@@ -17,11 +17,25 @@
   "permissions": {
     "allow": [
       "Read(memory/**)",
+      "Read(workspace/**)",
       "Edit(memory/**)",
       "Read(tasks/**)",
       "Edit(tasks/**)",
-      "Bash(scripts/data-cmd:*)",
-      "Bash(scripts/workspace-cmd:*)",
+      "Bash(scripts/data-cmd *)",
+      "Bash(scripts/workspace-cmd * git status*)",
+      "Bash(scripts/workspace-cmd * git log*)",
+      "Bash(scripts/workspace-cmd * git diff*)",
+      "Bash(scripts/workspace-cmd * git show*)",
+      "Bash(scripts/workspace-cmd * git branch*)",
+      "Bash(scripts/workspace-cmd * git checkout*)",
+      "Bash(scripts/workspace-cmd * git switch*)",
+      "Bash(scripts/workspace-cmd * git add*)",
+      "Bash(scripts/workspace-cmd * git commit*)",
+      "Bash(scripts/workspace-cmd * cat *)",
+      "Bash(scripts/workspace-cmd * ls*)",
+      "Bash(scripts/workspace-cmd * head *)",
+      "Bash(scripts/workspace-cmd * gh pr *)",
+      "Bash(scripts/workspace-cmd * pwd)",
       "mcp__plugin_Notion_notion__notion-search",
       "mcp__plugin_Notion_notion__notion-fetch",
       "mcp__plugin_Notion_notion__notion-get-users",
@@ -39,10 +53,10 @@
       "mcp__plugin_slack_slack__slack_read_thread",
       "Bash(claude mcp list)",
       "Bash(gh auth status)",
-      "Bash(gh pr list:*)",
-      "Bash(gh search:*)",
-      "Bash(gh repo clone:*)",
-      "Bash(gh repo view:*)"
+      "Bash(gh pr list *)",
+      "Bash(gh search *)",
+      "Bash(gh repo clone *)",
+      "Bash(gh repo view *)"
     ]
   }
 }
