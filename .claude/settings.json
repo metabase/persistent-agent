@@ -18,10 +18,10 @@
     "allow": [
       "Read(memory/**)",
       "Edit(memory/**)",
-      "Bash(rm memory/**)",
       "Read(tasks/**)",
       "Edit(tasks/**)",
-      "Bash(rm tasks/**)",
+      "Bash(scripts/safe-rm:*)",
+      "Bash(scripts/safe-mv:*)",
       "mcp__plugin_Notion_notion__notion-search",
       "mcp__plugin_Notion_notion__notion-fetch",
       "mcp__plugin_Notion_notion__notion-get-users",

@@ -4,4 +4,4 @@ When learning something new, always prefer updating an existing memory file over
 
 Memories referenced with `@` in `CLAUDE.md` are eagerly loaded at startup. Keep it updated but minimal so they don't clog up the context. Explore the `memory` folder on-demand for other memories.
 
-When using Bash commands (e.g. `rm`) on memory files, use relative paths (e.g. `rm memory/foo.md`) so they match the permission globs in settings.
+Use `scripts/safe-rm` and `scripts/safe-mv` for those file operations (e.g. `scripts/safe-rm memory/foo.md`). These enforce that paths are under `memory/` or `tasks/`.

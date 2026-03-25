@@ -17,4 +17,4 @@ If you're called to process tasks in batch try to be as independent as possible 
 
 Gather any blockers you find to batch processing and save them in the daily note and task for the principal to review and clear them if possible, to enable you to work ever more autonomously.
 
-When using Bash commands (e.g. `rm`) on task files, use relative paths (e.g. `rm tasks/inbox/foo.md`) so they match the permission globs in settings.
+Use `scripts/safe-rm` and `scripts/safe-mv` for those file operations (e.g. `scripts/safe-rm tasks/inbox/foo.md`, `scripts/safe-mv tasks/inbox/foo.md tasks/in-progress/foo.md`). These enforce that paths are under `memory/` or `tasks/`.

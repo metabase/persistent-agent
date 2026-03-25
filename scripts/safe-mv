@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -ne 2 ]; then
+  echo "Usage: scripts/safe-mv <src> <dst>" >&2
+  exit 1
+fi
+
+for path in "$1" "$2"; do
+  case "$path" in
+    *..*)
+      echo "Error: path must not contain ..: $path" >&2
+      exit 1
+      ;;
+    memory/*|tasks/*) ;;
+    *)
+      echo "Error: path must be under memory/ or tasks/: $path" >&2
+      exit 1
+      ;;
+  esac
+done
+
+mv "$1" "$2"
