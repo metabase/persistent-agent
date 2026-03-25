@@ -16,6 +16,7 @@ You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quicks
 Initial setup will fill in `memory/principal.md` and `memory/company.md`.
 Further usage will add, update, and trim memories.
 Memories that should always be present will be added to `CLAUDE.md`.
+Memories in `memories/skills` will have claude skills created for them whenever you run `pa setup`.
 
 
 ## Tasks
