@@ -16,3 +16,5 @@ When using `gh` prefer individual bash tool calls for each repository instead of
 ## Repositories
 | Name             | URL                                          |
 | ---------------- | -------------------------------------------- |
+
+Company repositories should be located as sibling folders to this project.
