@@ -4,7 +4,7 @@ When learning something new, always prefer updating an existing memory file over
 
 Memories referenced with `@` in `CLAUDE.md` are eagerly loaded at startup. Keep it updated but minimal so they don't clog up the context. Explore the `memory` folder on-demand for other memories.
 
-Use `scripts/safe-rm` and `scripts/safe-mv` for those file operations (e.g. `scripts/safe-rm memory/foo.md`). These enforce that paths are under `memory/` or `tasks/`.
+Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm memory/foo.md`). It enforces that paths are under `memory/` or `tasks/`.
 
 
 ## Initial structure

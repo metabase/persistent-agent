@@ -20,8 +20,8 @@
       "Edit(memory/**)",
       "Read(tasks/**)",
       "Edit(tasks/**)",
-      "Bash(scripts/safe-rm:*)",
-      "Bash(scripts/safe-mv:*)",
+      "Bash(scripts/data-cmd:*)",
+      "Bash(scripts/workspace-cmd:*)",
       "mcp__plugin_Notion_notion__notion-search",
       "mcp__plugin_Notion_notion__notion-fetch",
       "mcp__plugin_Notion_notion__notion-get-users",
@@ -31,6 +31,7 @@
       "mcp__plugin_linear_linear__get_issue",
       "mcp__plugin_linear_linear__get_user",
       "mcp__plugin_linear_linear__get_team",
+      "mcp__plugin_linear_linear__list_teams",
       "mcp__plugin_linear_linear__get_project",
       "mcp__plugin_slack_slack__slack_search_users",
       "mcp__plugin_slack_slack__slack_search_channels",
@@ -39,7 +40,9 @@
       "Bash(claude mcp list)",
       "Bash(gh auth status)",
       "Bash(gh pr list:*)",
-      "Bash(gh search:*)"
+      "Bash(gh search:*)",
+      "Bash(gh repo clone:*)",
+      "Bash(gh repo view:*)"
     ]
   }
 }

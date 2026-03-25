@@ -17,4 +17,4 @@ If you're called to process tasks in batch try to be as independent as possible 
 
 Gather any blockers you find to batch processing and save them in the daily note and task for the principal to review and clear them if possible, to enable you to work ever more autonomously.
 
-Use `scripts/safe-rm` and `scripts/safe-mv` for those file operations (e.g. `scripts/safe-rm tasks/inbox/foo.md`, `scripts/safe-mv tasks/inbox/foo.md tasks/in-progress/foo.md`). These enforce that paths are under `memory/` or `tasks/`.
+Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm tasks/inbox/foo.md`, `scripts/data-cmd mv tasks/inbox/foo.md tasks/in-progress/foo.md`). It enforces that paths are under `memory/` or `tasks/`.

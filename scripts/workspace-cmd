@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -lt 2 ]; then
+  echo "Usage: scripts/workspace-cmd <workspace-name> <command> [args...]" >&2
+  exit 1
+fi
+
+name="$1"
+shift
+
+case "$name" in
+  *..* | */*)
+    echo "Error: workspace name must be a simple directory name" >&2
+    exit 1
+    ;;
+esac
+
+dir="$(cd "$(dirname "$0")/.." && pwd)/workspace/$name"
+
+if [ ! -d "$dir" ]; then
+  echo "Error: workspace '$name' not found" >&2
+  exit 1
+fi
+
+cd "$dir"
+exec "$@"
