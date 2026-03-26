@@ -8,6 +8,7 @@ This repository is your working directory. It has your memories, tasks, and anyt
 - @memory/skills/setup.md
 - @memory/skills/memory-management.md
 - @memory/skills/task-management.md
+- @memory/skills/permission-management.md
 - @memory/skills/daily-note.md
 - @memory/company.md
 - @memory/workspace.md

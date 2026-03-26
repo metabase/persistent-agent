@@ -14,9 +14,25 @@
       }
     }
   },
+  "hooks": {
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/log-permission-request.sh"
+          }
+        ]
+      }
+    ]
+  },
   "permissions": {
     "deny": [
       "Bash(cd workspace/*)"
+    ],
+    "ask": [
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/settings.local.json)"
     ],
     "allow": [
       "Read(memory/**)",
@@ -27,7 +43,9 @@
       "Edit(memory/**)",
       "Read(tasks/**)",
       "Edit(tasks/**)",
+      "Edit(.claude/skills/**)",
       "Bash(scripts/data-cmd *)",
+      "Bash(scripts/truncate-perms-log)",
       "Bash(scripts/workspace-cmd * git *)",
       "Bash(scripts/workspace-cmd * cat *)",
       "Bash(scripts/workspace-cmd * ls *)",
@@ -80,7 +98,8 @@
       "Bash(gh repo clone *)",
       "Bash(gh repo view *)",
       "Bash(gh repo list *)",
-      "Bash(defuddle parse *)"
+      "Bash(defuddle parse *)",
+      "Bash(mkdir *)"
     ]
   }
 }

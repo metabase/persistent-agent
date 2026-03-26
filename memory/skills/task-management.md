@@ -13,10 +13,11 @@ Some tasks may be created with a timestamp filename. When you see these, update 
 ## Polling waiting tasks
 
 Use a loop (see https://code.claude.com/docs/en/scheduled-tasks.md) to check `tasks/waiting` periodically. For each task with a PR:
-- CI failed → move to `in-progress`, note the failure
-- Changes requested → move to `in-progress`, note the feedback
-- Approved + merged → move to `archive`
-- Still pending → leave in `waiting`
+- CI flaked -> note the flake, re-run the failed CI job
+- CI failed -> move to `in-progress`, note the failure
+- Changes requested -> move to `in-progress`, note the feedback
+- Approved + merged -> move to `archive`
+- Still pending -> leave in `waiting`
 
 
 ## Tasks as a persistent agent
@@ -48,16 +49,3 @@ When a task results in code changes, create PRs using this workflow:
 2. Then `gh pr create --draft --fill`
 
 Use `scripts/workspace-cmd <repo> gh pr create ...` to run in the right directory.
-
-
-## Permissions
-
-When a tool call gets blocked by a permission prompt and the action looks safe (e.g. reading/searching/editing workspace files, common development commands, non-destructive operations), proactively suggest adding a permission rule to `.claude/settings.local.json` so it doesn't happen again.
-
-Tips:
-- `.claude/settings.json` — shared across all persistent-agents
-- `.claude/settings.local.json` — settings specific to this agent
-- `Bash(cmd *)` (with space) enforces a word boundary; `Bash(cmd*)` (no space) matches any suffix
-- `*` in Read/Edit rules matches single directory; `**` matches recursively (gitignore spec)
-
-See https://code.claude.com/docs/en/permissions.md for the full permission rule syntax.
