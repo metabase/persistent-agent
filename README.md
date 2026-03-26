@@ -11,6 +11,9 @@ You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quicks
 Then run `bin/pa install` to add `pa` to your global `$PATH`, and run `pa setup <your name>` to perform first-time user setup.
 It will ask you for the repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
 
+After installing `pa` you can call it from any folder, but it will always run in this folder.
+If you want to run multiple `pa` locally, you can use `bin/pa` instead of globally installed `pa`.
+
 
 ## Usage
 

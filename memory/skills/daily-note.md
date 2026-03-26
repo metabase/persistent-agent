@@ -15,5 +15,5 @@ Note: Slack drafts absorb preceding text into native list items when using `- ` 
 
 Propose composing a SoD when running in the morning, and save it the the daily note and as a draft in slack.
 
-Afterwards pull in all the context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in) for each repository, linear projects, tasks, etc, and propose a plan of action for the day.
+Afterwards pull in all the context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in) for each repository, assigned prioritized linear issues, linear projects, tasks, etc, and propose a plan of action for the day.
 Ignore pieces of work that don't seem active.
