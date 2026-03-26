@@ -2,7 +2,15 @@ Keep notes for days in `memory/daily-notes/` as `YYYY-MM-DD.md` to help your pri
 
 
 ## Start-of-Day (SoD) routine
-Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status.
+
+Start by getting a summary of noteworthy slack updates across general, team channel, project channels the principal is involved in, and channels related to the principals' role.
+
+Afterwards pull in new inbox tasks if any, and context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in).
+Ignore pieces of work that don't seem active.
+
+Save this information in the daily note, and propose a plan for the day.
+
+Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status. Propose composing this slack SoD draft.
 
 The format should be like this:
 ```
@@ -12,8 +20,3 @@ SoD:
 ```
 
 Note: Slack drafts absorb preceding text into native list items when using `- ` or `• `. Use ` ▸ ` (space + triangular bullet + space) as a workaround.
-
-Propose composing a SoD when running in the morning, and save it the the daily note and as a draft in slack.
-
-Afterwards pull in all the context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in) for each repository, assigned prioritized linear issues, linear projects, tasks, etc, and propose a plan of action for the day.
-Ignore pieces of work that don't seem active.
