@@ -36,6 +36,8 @@
       "Bash(scripts/workspace-cmd * grep *)",
       "Bash(scripts/workspace-cmd * curl *)",
       "Bash(scripts/workspace-cmd * gh pr *)",
+      "Bash(scripts/workspace-cmd * gh run *)",
+      "Bash(scripts/workspace-cmd * gh api *)",
       "Bash(scripts/workspace-cmd * pwd)",
       "Bash(scripts/workspace-cmd * sed *)",
       "Bash(scripts/workspace-cmd * yarn *)",
