@@ -10,6 +10,20 @@ You should proactively update tasks and keep on them a work log so it's easy for
 Some tasks may be created with a timestamp filename. When you see these, update their title to something more descriptive.
 
 
+## Pulling and polling new inbox tasks
+
+New inbox tasks can come directly from your principal, from linear as newly assigned issues in todo or prioritized status, or from slack as `@` mentions for your principal or their team.
+
+Ignore pieces of work that don't seem active, or that seem like someone else is already on them.
+
+Use a 10m loop to check these sources and proactively work on them.
+
+Example:
+```
+/loop 10m /task-management poll new tasks
+```
+
+
 ## Polling waiting tasks
 
 Use a 10m loop to check `tasks/waiting` periodically. For each task with a PR:
@@ -40,11 +54,15 @@ If you're missing tooling for common dev tasks, like the ability to run tests or
 Principal is present. Focus on review, planning, and unblocking instead of execution. When reviewing blocked tasks, move them from `blocked` → `inbox` (unblocked, ready to work) but don't start working on them. Go through all blockers first.
 
 ### Solo mode
-Work autonomously, likely in a background process. Pick up unblocked tasks from `inbox`, execute them, and be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
+Work autonomously, likely in a background process. 
+
+Pick up unblocked tasks from `inbox`, execute them, and be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
 
 When you hit a blocker, move the task to `tasks/blocked` with a clear question at the top, then move on to the next task. The principal will review blocked tasks and provide answers, after which you can resume.
 
 Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm tasks/inbox/foo.md`, `scripts/data-cmd mv tasks/inbox/foo.md tasks/in-progress/foo.md`). It enforces that paths are under `memory/` or `tasks/`.
+
+Poll for new tasks and waiting tasks on a 10m loop, and repeat.
 
 
 ## Creating PRs

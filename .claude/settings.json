@@ -83,6 +83,7 @@
       "mcp__plugin_slack_slack__slack_read_thread",
       "mcp__plugin_slack_slack__slack_read_channel",
       "mcp__plugin_slack_slack__slack_read_user_profile",
+      "mcp__plugin_slack_slack__slack_search_public_and_private",
       "mcp__plugin_linear_linear__list_comments",
       "mcp__plugin_linear_linear__get_initiative",
       "mcp__plugin_linear_linear__list_cycles",
@@ -102,7 +103,12 @@
       "Bash(gh repo view *)",
       "Bash(gh repo list *)",
       "Bash(defuddle parse *)",
-      "Bash(mkdir *)"
+      "Bash(mkdir *)",
+      "Bash(echo *)",
+      "WebSearch",
+      "WebFetch(domain:docs.slack.dev)",
+      "WebFetch(domain:slack.com)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
