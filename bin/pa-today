@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+cd "$(dirname "$0")/.." || exit 1
+
+note="memory/daily-notes/$(date +%Y-%m-%d).md"
+
+if [ -f "$note" ]; then
+  exec cat "$note"
+else
+  echo "No daily note for today ($(date +%Y-%m-%d))."
+  exit 1
+fi
