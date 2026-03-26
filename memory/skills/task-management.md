@@ -12,12 +12,17 @@ Some tasks may be created with a timestamp filename. When you see these, update 
 
 ## Polling waiting tasks
 
-Use a loop (see https://code.claude.com/docs/en/scheduled-tasks.md) to check `tasks/waiting` periodically. For each task with a PR:
+Use a 10m loop to check `tasks/waiting` periodically. For each task with a PR:
 - CI flaked -> note the flake, re-run the failed CI job
 - CI failed -> move to `in-progress`, note the failure
 - Changes requested -> move to `in-progress`, note the feedback
 - Approved + merged -> move to `archive`
 - Still pending -> leave in `waiting`
+
+Example:
+```
+/loop 10m /task-management poll waiting tasks
+```
 
 
 ## Tasks as a persistent agent
