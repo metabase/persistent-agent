@@ -16,6 +16,7 @@ It will ask you for the repositories you want on your workspace, and you can ans
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
 - `pa install`: installs `pa` into `$PATH`
+- `pa today`: show todays daily note
 - `pa tasks`: lists task status
 - `pa inbox <text>`: adds a new task to the inbox
 
