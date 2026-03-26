@@ -29,9 +29,9 @@ Example:
 
 As an agent you already know how to generally perform tasks. But in the context of a persistent agent, you're not guaranteed to always have a principal at hand, so you need to focus more on working independently, making your work legible, increasing principal confidence, and improving your processes over time.
 
-For non-trivial tasks try to separate planning and execution. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day.
+For non-trivial tasks try to separate planning and execution. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day. When you take on bugs make sure to reproduce them first, then fix them.
 
-When you take on bugs make sure to reproduce them first, then fix them.
+If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your principal to unblock you.
 
 
 ## Working modes
