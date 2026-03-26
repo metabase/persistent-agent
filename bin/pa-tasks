@@ -3,7 +3,7 @@ set -euo pipefail
 
 root="$(dirname "$0")/../tasks"
 
-for folder in inbox in-progress outbox; do
+for folder in inbox in-progress waiting blocked; do
   dir="$root/$folder"
   count=0
   items=""
