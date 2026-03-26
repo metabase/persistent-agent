@@ -18,7 +18,7 @@ Run `pa sod`, or just say `sod` on a existing session (`pa <anything>` will just
 Pick a couple of your tasks and tell `pa` to add them to your inbox.
 Then say `batch` to start batch processing them.
 `pa` will try to be as independent as possible and stop when it can't progress.
-Ask about blockers and clear them, then say `batch` again to continue autonomously.
+Say `blockers` to ask about blockers and clear them, then say `batch` again to continue autonomously.
 
 
 ## Workspace
