@@ -9,7 +9,9 @@ Persistent agent, or `pa`, is a claude-based agent memory, task, and permissions
 
 You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quickstart) installed. 
 Then run `bin/pa install` to add `pa` to your global `$PATH`, and run `pa setup <your name>` to perform first-time user setup.
+
 It will ask you for the repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
+It will also tell you how to connect tools it needs to work.
 
 After installing `pa` you can call it from any folder, but it will always run in this folder.
 If you want to run multiple `pa` locally, you can use `bin/pa` instead of globally installed `pa`.
@@ -32,9 +34,10 @@ Run `pa sod`, or just say `sod` on a existing session.
 `pa` will look at tasks, linear issues, and PRs to propose a day plan and a slack start-of-day draft.
 It will then try to unblock itself and others that are waiting for your input.
 
-Pick a couple of your tasks and tell `pa` to add them to your inbox.
+If you don't want `pa` to pick up a task, tell it.
 Then say `solo` for `pa` to start working on them autonomously.
 `pa` will try to be as independent as possible and stop when it can't progress on anything.
 
-Say `blockers` to ask about blockers and clear them, then say `solo` again to continue autonomously.
-Tasks that are in `waiting` state will be checked every 10m and on start of day.
+Say `blockers` or `pair` to ask about blockers and clear them, then say `solo` again to continue autonomously.
+
+New tasks, or tasks that are in `waiting` state, will be checked every 10m and on start of day.

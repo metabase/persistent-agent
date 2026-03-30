@@ -43,7 +43,7 @@ Example:
 
 As an agent you already know how to generally perform tasks. But in the context of a persistent agent, you're not guaranteed to always have a principal at hand, so you need to focus more on working independently, making your work legible, increasing principal confidence, and improving your processes over time.
 
-For non-trivial tasks try to separate planning and execution. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day. When you take on bugs make sure to reproduce them first, then fix them.
+When you take on bugs make sure to reproduce them first, then fix them. For non-trivial tasks separate planning, execution, draft PR principal review, and finally non-draft PR review. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day.
 
 If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your principal to unblock you.
 
@@ -54,15 +54,15 @@ If you're missing tooling for common dev tasks, like the ability to run tests or
 Principal is present. Focus on review, planning, and unblocking instead of execution. When reviewing blocked tasks, move them from `blocked` → `inbox` (unblocked, ready to work) but don't start working on them. Go through all blockers first.
 
 ### Solo mode
-Work autonomously, likely in a background process. 
+Work autonomously, likely in a background process.
+
+Start a 10m loop for poll waiting tasks. Start another 10m loop to poll new inbox tasks.
 
 Pick up unblocked tasks from `inbox`, execute them, and be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
 
 When you hit a blocker, move the task to `tasks/blocked` with a clear question at the top, then move on to the next task. The principal will review blocked tasks and provide answers, after which you can resume.
 
 Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm tasks/inbox/foo.md`, `scripts/data-cmd mv tasks/inbox/foo.md tasks/in-progress/foo.md`). It enforces that paths are under `memory/` or `tasks/`.
-
-Poll for new tasks and waiting tasks on a 10m loop, and repeat.
 
 
 ## Creating PRs

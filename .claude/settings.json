@@ -90,6 +90,7 @@
       "mcp__plugin_linear_linear__search_documentation",
       "mcp__plugin_linear_linear__list_milestones",
       "mcp__plugin_linear_linear__list_users",
+      "mcp__plugin_slack_slack__slack_search_public",
       "Bash(ls *)",
       "Bash(cat *)",
       "Bash(find *)",

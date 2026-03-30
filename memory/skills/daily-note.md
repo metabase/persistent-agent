@@ -5,8 +5,7 @@ Keep notes for days in `memory/daily-notes/` as `YYYY-MM-DD.md` to help your pri
 
 Start by getting a summary of noteworthy slack updates across general, team channel, project channels the principal is involved in, and channels related to the principals' role.
 
-Afterwards pull in new inbox tasks if any, and context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in).
-Ignore pieces of work that don't seem active.
+Afterwards pull in new inbox tasks if any, and context from open PRs blocked on the principals attention (own in draft/review or others' review that the principal is involved in). Ignore pieces of work that don't seem active. Then review permission requests since the last run.
 
 Save this information in the daily note, and propose a plan for the day.
 
