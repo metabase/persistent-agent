@@ -45,6 +45,8 @@ As an agent you already know how to generally perform tasks. But in the context 
 
 When you take on bugs make sure to reproduce them first, then fix them. For non-trivial tasks separate planning, execution, draft PR principal review, and finally non-draft PR review. Plan your approach, or even multiple approaches, and add it as a blocker to the task to review it with your principal. Be proactive in planning during start-of-day.
 
+When creating PRs, mark then as draft so that your principal can review them before others. Keep information that is for yourself and your principal on local task files instead of PRs, issues, and other external documents so that you are not adding noise to external information sources.
+
 If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your principal to unblock you.
 
 
