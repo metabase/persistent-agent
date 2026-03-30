@@ -19,6 +19,7 @@ If you want to run multiple `pa` locally, you can use `bin/pa` instead of global
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
 - `pa install`: installs `pa` into `$PATH`
+- `pa save`: git commit changes to tasks and daily note
 - `pa today`: show todays daily note
 - `pa tasks`: lists task status
 - `pa inbox <text>`: adds a new task to the inbox
