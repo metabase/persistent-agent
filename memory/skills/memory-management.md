@@ -17,6 +17,4 @@ memory/
   workspace.md      # repositories
   skills/           # instructions for agent skills
   daily-notes/      # daily notes (YYYY-MM-DD.md)
-  people/           # info about people you interact with
-  projects/         # context on ongoing projects
 ```

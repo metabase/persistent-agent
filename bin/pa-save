@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cd "$(dirname "$0")/.." || exit 1
+
+git add tasks/ memory/daily-notes/
+git diff --cached --quiet && { echo "Nothing to commit."; exit 0; }
+git commit -m "save: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
