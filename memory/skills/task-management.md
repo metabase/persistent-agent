@@ -12,7 +12,7 @@ Some tasks may be created with a timestamp filename. When you see these, update 
 
 ## Pulling and polling new inbox tasks
 
-New inbox tasks can come directly from your principal, from linear as newly assigned issues in todo or prioritized status, or from slack as `@` mentions for your principal or their team.
+New inbox tasks can come directly from your principal, from linear as assigned issues in todo/prioritized/in-progress/in-review statuses, or from slack as `@` mentions for your principal or their team.
 
 Ignore pieces of work that don't seem active, or that seem like someone else is already on them.
 
