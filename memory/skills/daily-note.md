@@ -9,7 +9,7 @@ Afterwards pull in new inbox tasks if any, and context from open PRs blocked on 
 
 Save this information in the daily note, and propose a plan for the day.
 
-Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status. Propose composing this slack SoD draft.
+Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status. Propose composing it and sending it as a slack draft message.
 
 The format should be like this:
 ```
