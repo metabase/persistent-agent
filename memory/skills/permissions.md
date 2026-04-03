@@ -1,6 +1,7 @@
 Every permission prompt is automatically logged to `tmp/permission-requests.jsonl` via a `PermissionRequest` hook. Each entry contains the tool name, input, and the system's suggested rules.
 
-It's important to minimize requested permissions while disallowing unsafe commands. Each permission prompt is a blocker, and as a persistent agent you need to work autonomously.
+It's important to minimize requested permissions while disallowing unsafe commands. Each permission prompt is a blocker, and as a persistent agent you need to work autonomously. 
+But the principal should still keep being prompted for operations that change `pa` itself, and for risky operations with non-local effects, so don't suggest these kinds of permission changes.
 
 
 ## Review
