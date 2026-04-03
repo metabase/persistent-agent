@@ -35,6 +35,8 @@ Say `pair` to get the current status from `pa`, unblock or work with it. Then sa
 If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
 Permission review should also be automatically reviewed during the start-of-day routine.
 
+Run `pa save` from your terminal whenever you want to commit memory and task changes to git.
+
 
 ## CLI usage
 
