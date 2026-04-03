@@ -4,17 +4,17 @@ When learning something new, always prefer updating an existing memory file over
 
 Memories referenced with `@` in `CLAUDE.md` are eagerly loaded at startup. Keep it updated but minimal so they don't clog up the context. Explore the `memory` folder on-demand for other memories.
 
-Use `scripts/data-cmd` for file operations (e.g. `scripts/data-cmd rm memory/foo.md`). It enforces that paths are under `memory/` or `tasks/`.
+Don't delete memories that you no longer need, move them to `memory/archive` instead.
 
 
 ## Initial structure
 
 ```
 memory/
-  glossary.md       # shared terminology
-  principal.md      # who you act on behalf of
-  company.md        # company tools, teams
-  workspace.md      # repositories
+  archive/          # memories that are no longer relevant
+  daily-notes/      # daily notes as YYYY-MM-DD.md
   skills/           # instructions for agent skills
-  daily-notes/      # daily notes (YYYY-MM-DD.md)
+  glossary.md       # terminology
+  principal.md      # who you act on behalf of, and tools
+  workspace.md      # repositories
 ```

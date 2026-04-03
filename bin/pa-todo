@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-dir="$(dirname "$0")/../tasks/inbox"
+dir="$(dirname "$0")/../tasks/todo"
 file="$dir/$(date -u +%Y-%m-%d_%H-%M-%S).md"
 
 if [ $# -eq 0 ]; then
-  echo "Usage: pa-inbox <text>" >&2
+  echo "Usage: pa-todo <text>" >&2
   exit 1
 fi
 

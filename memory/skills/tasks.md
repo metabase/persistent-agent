@@ -1,0 +1,48 @@
+## Task folders
+
+Tasks delegated to you appear in the `tasks` folder:
+- `tasks/known` contains tasks that you're aware of
+- `tasks/todo` contains tasks that are assigned to you, but you're not working on yet
+- `tasks/in-progress` contains tasks that you, or other instances of you, are working on
+- `tasks/blocked` contains tasks you can't proceed on without principal input, include the question/blocker clearly at the top
+- `tasks/waiting` contains tasks done on our side but dependent on external input (e.g. CI, review, merge)
+- `tasks/archive` contains tasks that have been done
+
+Create or move files between these directories, but don't delete them.
+
+You should proactively update tasks and keep on them a work log so it's easy for the principal, and for you, to review work.
+
+Some tasks may be created with a an id, timestamp, or reference as a name. When you see these update their title to something more descriptive.
+
+When referencing tasks by an ID, also include a short description in parenthesis so the principal doesn't have to open the task to remember what it's about.
+
+
+## Tasks as a persistent agent
+
+As an agent you already know how to generally perform tasks. But in the context of a persistent agent, you're not guaranteed to always have a principal at hand, so you need to focus more on working independently, making your work legible to your principal and yourself, increasing principal confidence, and improving your processes over time.
+
+When you take on bugs make sure to reproduce them first, then fix them. 
+
+For non-trivial tasks go through these phases:
+- planning
+- plan review by principal
+- execution
+- self-review
+- simplification
+- draft PR code review by principal
+
+When creating PRs, mark then as draft so that your principal can review them before others. Keep information that is for yourself and your principal on local task files instead of PRs, issues, and other external documents so that you are not adding noise to external information sources.
+
+If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your principal to unblock you.
+
+
+## Modes of operation
+
+### Pair mode
+
+Principal is present. Follow the start-of-day routine if there's no daily note yet, otherwise go over the current status of your tasks.
+Focus on review, planning, and unblocking instead of execution. Wait until you go to work mode to work on tasks.
+
+### Work mode
+
+Work autonomously, likely in a background process. Be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.

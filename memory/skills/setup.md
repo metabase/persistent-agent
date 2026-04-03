@@ -1,9 +1,9 @@
 Make sure that:
-- you have access to the tools in @memory/company.md using the method listed as `Agent access`
+- you have access to the tools in @memory/workspace.md using the method listed as `Agent access`
   - run `claude mcp list` for mcp tool status
   - if not, prompt the user to connect, giving them instructions about the commands they should run
   - for mcps the user should use `/mcp` to manage them
-- principal and company information relevant to them is filled in from Notion
+- principal, workspace, and glossary information relevant to them is filled in from tools
   - if not, prompt for the principal's identity and fill it in
 - ask the user what repositories should be part of their workspace
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
