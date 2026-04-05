@@ -19,7 +19,7 @@ For each task with a PR:
 
 ## New known tasks
 
-New known tasks can come directly from your principal, from linear as assigned issues in todo/prioritized/in-progress/in-review statuses, or from slack as `@` mentions for your principal or their team.
+New known tasks can come directly from your principal, or from tools in workspace.md that have an Updates column entry.
 
 Ignore pieces of work that don't seem active, or that seem like someone else is already on them.
 

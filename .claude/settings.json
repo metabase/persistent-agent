@@ -28,7 +28,8 @@
   },
   "permissions": {
     "deny": [
-      "Bash(cd workspace/*)"
+      "Bash(cd workspace/*)",
+      "Bash(mv /*)"
     ],
     "ask": [
       "Edit(.claude/settings.json)",
