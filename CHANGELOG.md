@@ -1,3 +1,11 @@
+## 2026-04-08
+
+### Skills
+- new: `memory/skills/self-modification.md` — guidance for tasks that edit the agent's own files (skills, scripts, starting memories, permissions); covers pairing expectation, keeping self-modification commits clean of private info, propagating to `.claude/skills`, updating CHANGELOG.md, and contributing back via the workspace clone
+
+### CLAUDE.md
+- eagerly load `memory/skills/self-modification.md` as a core memory
+
 ## 2026-04-03
 
 ### Structure
