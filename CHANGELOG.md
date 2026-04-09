@@ -1,3 +1,16 @@
+## 2026-04-09
+
+### Task file format
+- YAML frontmatter replaces markdown key/value metadata (title, created, type, links)
+- `type` values: bug | feature | refactor | chore | docs | self-modification
+- `links` is a YAML list for URLs and `repo/branch` workspace refs
+- H1 heading removed — `title` in frontmatter is the source of truth
+- Status removed from file — the folder is the source of truth
+- "Work log" renamed to "Changelog"
+- ISO 8601 UTC timestamps for changelog entries and `created` field
+- New tasks use Goal + Scope sections; existing tasks keep their current sections (Summary, Notes, etc)
+- Existing date-only entries are fine — don't backfill times you don't know
+
 ## 2026-04-08
 
 ### Skills
