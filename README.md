@@ -45,6 +45,7 @@ Run `pa save` from your terminal whenever you want to commit memory and task cha
 - `pa save`: git commit changes to tasks and daily note
 - `pa today`: show todays daily note
 - `pa tasks`: lists task status
+- `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
 - `pa update`: pull new changes to `pa` and merge them into the current branch
 

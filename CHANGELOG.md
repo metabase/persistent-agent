@@ -1,3 +1,8 @@
+## 2026-04-10
+
+### Structure
+- `tasks/known/` → `tasks/backlog/`
+
 ## 2026-04-09
 
 ### Task file format

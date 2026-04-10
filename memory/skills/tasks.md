@@ -1,7 +1,7 @@
 ## Task folders
 
 Tasks delegated to you appear in the `tasks` folder:
-- `tasks/known` contains tasks that you're aware of
+- `tasks/backlog` contains tasks that you're aware of
 - `tasks/todo` contains tasks that are assigned to you, but you're not working on yet
 - `tasks/in-progress` contains tasks that you, or other instances of you, are working on
 - `tasks/blocked` contains tasks you can't proceed on without principal input, include the question/blocker clearly at the top
