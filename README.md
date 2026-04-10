@@ -47,3 +47,10 @@ Run `pa save` from your terminal whenever you want to commit memory and task cha
 - `pa tasks`: lists task status
 - `pa todo <text>`: adds a new task to the todo folder
 - `pa update`: pull new changes to `pa` and merge them into the current branch
+
+
+## Remote control
+
+Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app.
+
+To enable it type `/remote-control` inside an existing session, or run `/config` and set **Enable Remote Control for all sessions** to `true`.
