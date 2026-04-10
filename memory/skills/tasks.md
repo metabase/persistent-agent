@@ -82,6 +82,8 @@ Focus on review, planning, and unblocking instead of execution. Wait until you g
 
 Work autonomously, likely in a background process. Be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
 
+If your attempts to solve something are getting more complex than the task itself (increasingly exotic workarounds, repeated failures, escalating approaches) stop and move the task to `blocked` with a clear description of what's not working. Don't spiral.
+
 
 ## Current time
 
