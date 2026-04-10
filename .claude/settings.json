@@ -28,6 +28,8 @@
   },
   "permissions": {
     "deny": [
+      "Bash(*&&*)",
+      "Bash(*||*)",
       "Bash(cd workspace/*)",
       "Bash(mv /*)"
     ],
