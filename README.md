@@ -49,6 +49,16 @@ Run `pa save` from your terminal whenever you want to commit memory and task cha
 - `pa update`: pull new changes to `pa` and merge them into the current branch
 
 
+## Updating, modifying, and contributing back
+
+Run `pa update` to fetch and merge the latest changes from upstream. Conflicts are resolved automatically using `CHANGELOG.md` for context.
+
+You can and should edit `pa` to suit the way you work. The `memory` folder has all the instructions on how `pa` works as markdown files. 
+Edit them directly or work with `pa` on self-modification tasks. 
+
+If you want to contribute them back to the `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
+
+
 ## Remote control
 
 Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app.
