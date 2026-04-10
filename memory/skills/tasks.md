@@ -56,7 +56,7 @@ When you take on bugs make sure to reproduce them first, then fix them.
 
 For non-trivial tasks go through these phases, repeating as needed:
 - approach and testing plan
-- verify hypotheses
+- verify hypotheses empirically
 - plan review by principal
 - execution
 - self-review

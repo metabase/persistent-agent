@@ -30,7 +30,7 @@ It will then try to unblock itself and others that are waiting for your input.
 Give `pa` tasks to work by telling it to add them to its todos.
 Then say `loop work` for `pa` to start working on them autonomously on a repeating [work](./memory/skills/work.md) 10m schedule.
 
-Say `pair` to get the current status from `pa`, unblock or work with it. Then say `loop work` again to continue autonomously.
+Say `pair` to get the current status from `pa`, unblock or work with it. Then say `/loop work` again to continue autonomously.
 
 If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
 Permission review should also be automatically reviewed during the start-of-day routine.
