@@ -64,6 +64,8 @@ For non-trivial tasks go through these phases, repeating as needed:
 - testing
 - draft PR code review by principal
 
+In large refactor tasks expect lots of exploration, trial and error, backtracking, and re-assessment of the approach given new information. Focus on early verification, keeping the system's external behaviour unchanged, and how the data flows between internal interfaces.
+
 When creating PRs, mark then as draft so that your principal can review them before others. Keep information that is for yourself and your principal on local task files instead of PRs, issues, and other external documents so that you are not adding noise to external information sources.
 
 If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your principal to unblock you.
