@@ -1,4 +1,4 @@
-Keep notes for days in `memory/daily-notes/` as `YYYY-MM-DD.md` to help your principal start their day, and so it's easy for them to review what you've worked on.
+Keep notes for days in `daily-notes/` as `YYYY-MM-DD.md` to help your principal start their day, and so it's easy for them to review what you've worked on.
 
 
 ## Start-of-Day (SoD) routine

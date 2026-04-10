@@ -12,7 +12,6 @@ Don't delete memories that you no longer need, move them to `memory/archive` ins
 ```
 memory/
   archive/          # memories that are no longer relevant
-  daily-notes/      # daily notes as YYYY-MM-DD.md
   skills/           # instructions for agent skills
   glossary.md       # terminology
   principal.md      # who you act on behalf of, and tools
