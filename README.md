@@ -30,7 +30,7 @@ It will then try to unblock itself and others that are waiting for your input.
 Give `pa` tasks to work by telling it to add them to its todos.
 Then say `loop work` for `pa` to start working on them autonomously on a repeating [work](./memory/skills/work.md) 10m schedule.
 
-Say `pair` to get the current status from `pa`, unblock or work with it. Then say `loop work` again to continue autonomously.
+Say `pair` to get the current status from `pa`, unblock or work with it. Then say `/loop work` again to continue autonomously.
 
 If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
 Permission review should also be automatically reviewed during the start-of-day routine.
@@ -45,5 +45,23 @@ Run `pa save` from your terminal whenever you want to commit memory and task cha
 - `pa save`: git commit changes to tasks and daily note
 - `pa today`: show todays daily note
 - `pa tasks`: lists task status
+- `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
 - `pa update`: pull new changes to `pa` and merge them into the current branch
+
+
+## Updating, modifying, and contributing back
+
+Run `pa update` to fetch and merge the latest changes from upstream. Conflicts are resolved automatically using `CHANGELOG.md` for context.
+
+You can and should edit `pa` to suit the way you work. The `memory` folder has all the instructions on how `pa` works as markdown files. 
+Edit them directly or work with `pa` on self-modification tasks. 
+
+If you want to contribute them back to the `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
+
+
+## Remote control
+
+Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app.
+
+To enable it type `/remote-control` inside an existing session, or run `/config` and set **Enable Remote Control for all sessions** to `true`.

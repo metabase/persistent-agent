@@ -7,7 +7,7 @@ Unless instructed otherwise, do self-modifications only while pairing with your 
 Keep self-modification commits clean of private information like task, daily-note, or private memory edits. This way it will be easier to look at these commits in isolation and use them for contributions.
 
 Before commiting a self-modification create any setup or derived data necessary to use it, like propagating skill memory changes to actual `.claude/skills`.
-Also update CHANGELOG.md with a description of the modifications so that it's easy to follow and reason about, especially during updates.
+Also update CHANGELOG.md with a new entry containing a description of the modifications so that it's easy to follow and reason about, especially during updates that need migrating data.
 
 
 ## Contributing back to upstream

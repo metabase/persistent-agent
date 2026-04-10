@@ -30,9 +30,12 @@ Examples:
 - `scripts/workspace-cmd infra-frontend git log --oneline -5`
 
 
-## Creating PRs
+## Creating commits and PRs
 
-When a task results in code changes, create PRs using this workflow:
+When a task results in code changes, be terse in commits and PR messages.
+It's likely that changes will need a lot of iteration before they are ready, so we don't want to be very descriptive of things that might change a lot and overwhelm readers.
+
+Create PRs using this workflow:
 1. Push the branch first
 2. Then `gh pr create --draft --fill`
 

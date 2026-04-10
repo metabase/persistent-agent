@@ -1,7 +1,7 @@
 ## Task folders
 
 Tasks delegated to you appear in the `tasks` folder:
-- `tasks/known` contains tasks that you're aware of
+- `tasks/backlog` contains tasks that you're aware of
 - `tasks/todo` contains tasks that are assigned to you, but you're not working on yet
 - `tasks/in-progress` contains tasks that you, or other instances of you, are working on
 - `tasks/blocked` contains tasks you can't proceed on without principal input, include the question/blocker clearly at the top
@@ -54,13 +54,17 @@ As an agent you already know how to generally perform tasks. But in the context 
 
 When you take on bugs make sure to reproduce them first, then fix them. 
 
-For non-trivial tasks go through these phases:
-- planning
+For non-trivial tasks go through these phases, repeating as needed:
+- approach and testing plan
+- verify hypotheses empirically
 - plan review by principal
 - execution
 - self-review
 - simplification
+- testing
 - draft PR code review by principal
+
+In large refactor tasks expect lots of exploration, trial and error, backtracking, and re-assessment of the approach given new information. Focus on early verification, keeping the system's external behaviour unchanged, and how the data flows between internal interfaces.
 
 When creating PRs, mark then as draft so that your principal can review them before others. Keep information that is for yourself and your principal on local task files instead of PRs, issues, and other external documents so that you are not adding noise to external information sources.
 
@@ -77,3 +81,12 @@ Focus on review, planning, and unblocking instead of execution. Wait until you g
 ### Work mode
 
 Work autonomously, likely in a background process. Be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
+
+If your attempts to solve something are getting more complex than the task itself (increasingly exotic workarounds, repeated failures, escalating approaches) stop and move the task to `blocked` with a clear description of what's not working. Don't spiral.
+
+
+## Current time
+
+The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
+- `date -u +%Y-%m-%dT%H:%M:%SZ` for UTC timestamps (changelog entries, `created` field)
+- `date +%Y-%m-%d` for local dates (daily notes)
