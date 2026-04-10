@@ -77,3 +77,10 @@ Focus on review, planning, and unblocking instead of execution. Wait until you g
 ### Work mode
 
 Work autonomously, likely in a background process. Be as independent as possible because the principal will likely not be available to answer questions or approve permission requests.
+
+
+## Current time
+
+The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
+- `date -u +%Y-%m-%dT%H:%M:%SZ` for UTC timestamps (changelog entries, `created` field)
+- `date +%Y-%m-%d` for local dates (daily notes)
