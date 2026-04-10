@@ -54,12 +54,14 @@ As an agent you already know how to generally perform tasks. But in the context 
 
 When you take on bugs make sure to reproduce them first, then fix them. 
 
-For non-trivial tasks go through these phases:
-- planning
+For non-trivial tasks go through these phases, repeating as needed:
+- approach and testing plan
+- verify hypotheses
 - plan review by principal
 - execution
 - self-review
 - simplification
+- testing
 - draft PR code review by principal
 
 When creating PRs, mark then as draft so that your principal can review them before others. Keep information that is for yourself and your principal on local task files instead of PRs, issues, and other external documents so that you are not adding noise to external information sources.
