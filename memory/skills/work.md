@@ -37,7 +37,3 @@ When a task enters `waiting` (CI running, PR under review), choose the right too
 
 Most waiting is one-shot. Only use Monitor when you'd benefit from seeing events as they happen.
 
-
-## Loop duration
-
-Use a 10m loop unless otherwise specified.
