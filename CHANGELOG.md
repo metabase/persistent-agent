@@ -1,3 +1,10 @@
+## 2026-04-14
+
+### Permissions
+- add `Bash(scripts/workspace-cmd * awk *)`, `Bash(scripts/workspace-cmd * md5sum *)`, `Bash(scripts/workspace-cmd * test *)` — safe read-only tools used in workspace
+- add `Edit/Read/Write(daily-notes/**)` — daily-notes/ moved to top level on Apr 10 but perms weren't propagated
+- remove non-functional `Bash(*&&*)` / `Bash(*||*)` deny rules — Claude Code splits compound commands on shell operators and matches each subcommand against rules independently, so these patterns never matched. Subcommand splitting already prevents chained-command bypass of other deny rules.
+
 ## 2026-04-10
 
 ### Structure
