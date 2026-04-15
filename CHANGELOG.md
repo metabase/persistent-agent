@@ -1,3 +1,8 @@
+## 2026-04-15
+
+### Tasks skill
+- clarify `blocked` vs `waiting`: principal review of a PR goes to `blocked` (it's principal input); `waiting` is for non-principal external steps (CI, third-party review, merge)
+
 ## 2026-04-14
 
 ### Permissions
