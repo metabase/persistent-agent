@@ -32,10 +32,17 @@ Then say `loop work` for `pa` to start working on them autonomously on a repeati
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `/loop work` again to continue autonomously.
 
+Run `pa save` from your terminal whenever you want to commit daily notes and task changes to git.
+
+
+## Permissions
+
+`pa` starts in [dontAsk permission mode](https://code.claude.com/docs/en/permission-modes#allow-only-pre-approved-tools-with-dontask-mode) so only pre-approved tools are used.
+If `pa` needs to call something its not allowed to for a task, it will block the task on that permission and move on to other tasks.
+
+You can exit this mode with `shift+tab` and start getting permissions requests again, but to get back into it you'll need to restart `pa`.
 If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
 Permission review should also be automatically reviewed during the start-of-day routine.
-
-Run `pa save` from your terminal whenever you want to commit memory and task changes to git.
 
 
 ## CLI usage
