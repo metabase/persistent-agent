@@ -27,6 +27,7 @@
     ]
   },
   "permissions": {
+    "defaultMode": "dontAsk",
     "deny": [
       "Bash(cd workspace/*)",
       "Bash(mv /*)"

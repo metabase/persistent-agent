@@ -1,3 +1,12 @@
+## 2026-04-16
+
+### Permissions
+- `permissions.defaultMode` set to `dontAsk` — `pa` starts with only pre-approved tools allowed and blocks tasks that need anything else, instead of interrupting for prompts. Exit with `shift+tab` to get permission requests again; restart `pa` to re-enter `dontAsk`.
+
+### README
+- document `dontAsk` default and how to exit it
+- move `pa save` line up next to the rest of the getting-started flow
+
 ## 2026-04-15
 
 ### Tasks skill
