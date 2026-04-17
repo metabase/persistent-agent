@@ -1,3 +1,18 @@
+## 2026-04-17
+
+### Tasks skill
+- add `repo chores` (lint, format, typecheck, pre-PR checks) as an explicit phase before draft PR review
+- replace `type` (single value) with `tags` (open-ended list); tags double as skill hints (e.g. `self-modification` → run that skill). Existing tasks should be migrated to this new format.
+
+### Start-of-day skill
+- scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (from `pa backlog`/`pa todo`) and propose normalizing them (filename, frontmatter, Goal section)
+
+### Work skill
+- normalize bare-text todo/backlog entries before working on them (autonomous, since principal isn't present)
+
+### bin/pa
+- forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
+
 ## 2026-04-16
 
 ### Permissions

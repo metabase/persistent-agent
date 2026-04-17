@@ -35,16 +35,6 @@ Say `pair` to get the current status from `pa`, unblock or work with it. Then sa
 Run `pa save` from your terminal whenever you want to commit daily notes and task changes to git.
 
 
-## Permissions
-
-`pa` starts in [dontAsk permission mode](https://code.claude.com/docs/en/permission-modes#allow-only-pre-approved-tools-with-dontask-mode) so only pre-approved tools are used.
-If `pa` needs to call something its not allowed to for a task, it will block the task on that permission and move on to other tasks.
-
-You can exit this mode with `shift+tab` and start getting permissions requests again, but to get back into it you'll need to restart `pa`.
-If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
-Permission review should also be automatically reviewed during the start-of-day routine.
-
-
 ## CLI usage
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
@@ -57,7 +47,22 @@ Permission review should also be automatically reviewed during the start-of-day 
 - `pa update`: pull new changes to `pa` and merge them into the current branch
 
 
+## Permissions
+
+`pa` starts in [`don't ask mode`](https://code.claude.com/docs/en/permission-modes#allow-only-pre-approved-tools-with-dontask-mode) so only pre-approved tools are used and work isn't interrupted by permission prompts.
+If `pa` needs to call something its not allowed to for a task, it will block the task on that permission and move on to other tasks.
+
+You can switch to other permissions modes with `shift+tab`, but to get back into `don't ask` mode you'll need to restart `pa`.
+If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
+Permission review should also be automatically reviewed during the start-of-day routine.
+
+[`auto mode`](https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode) is an alternative to pre-approving tools.
+This mode will use use a classifier to automatically determine which promps are safe and deny the rest. Use `shift+tab` to switch to it.
+
+
 ## Updating, modifying, and contributing back
+
+First you'll need to exit `don't ask mode` mode to allow `pa` to modify itself.
 
 Run `pa update` to fetch and merge the latest changes from upstream. Conflicts are resolved automatically using `CHANGELOG.md` for context.
 

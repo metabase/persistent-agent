@@ -9,6 +9,8 @@ Then review permission requests since the last run.
 
 Save this information in the daily note, and propose a plan for the day.
 
+Also scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa backlog` or `pa todo`) and propose normalizing them to the task format.
+
 
 ## Slack SoD message
 
