@@ -62,6 +62,7 @@ For non-trivial tasks go through these phases, repeating as needed:
 - self-review
 - simplification
 - testing
+- repo chores (lint, format, typecheck, and any other pre-PR checks the repo expects)
 - draft PR code review by principal
 
 In large refactor tasks expect lots of exploration, trial and error, backtracking, and re-assessment of the approach given new information. Focus on early verification, keeping the system's external behaviour unchanged, and how the data flows between internal interfaces.

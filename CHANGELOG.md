@@ -1,3 +1,8 @@
+## 2026-04-17
+
+### Tasks skill
+- add `repo chores` (lint, format, typecheck, pre-PR checks) as an explicit phase before draft PR review
+
 ## 2026-04-16
 
 ### Permissions
