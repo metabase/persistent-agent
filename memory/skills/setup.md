@@ -6,6 +6,8 @@ Make sure that:
 - principal, workspace, and glossary information relevant to them is filled in from tools
   - if not, prompt for the principal's identity and fill it in
 - ask the user what repositories should be part of their workspace
+  - clone each into `workspace/<repo>` (either `gh repo clone` or `git clone`)
+  - add the repo to the `## Repositories` table in `memory/workspace.md`
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create or update if not

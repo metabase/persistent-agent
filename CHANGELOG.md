@@ -14,6 +14,12 @@
 - forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
 - `pa update` now starts with `--permission-mode default` so the update flow can prompt for permissions instead of silently blocking under `dontAsk`.
 
+### Setup skill
+- spell out the clone step: clone into `workspace/<repo>` and add the repo to the workspace.md table. First-time setup was silently blocked under `dontAsk` because the clone step wasn't explicit.
+
+### Permissions
+- add `Bash(git clone * workspace/*)` so `git clone` into `workspace/` works alongside the existing `gh repo clone *`.
+
 ## 2026-04-16
 
 ### Permissions

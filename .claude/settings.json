@@ -49,6 +49,7 @@
       "Bash(git log *)",
       "Bash(git status)",
       "Bash(git status *)",
+      "Bash(git clone * workspace/*)",
       "Bash(gh api *)",
       "Bash(gh auth status)",
       "Bash(gh pr list *)",
