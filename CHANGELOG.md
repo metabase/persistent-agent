@@ -10,6 +10,9 @@
 ### Work skill
 - normalize bare-text todo/backlog entries before working on them (autonomous, since principal isn't present)
 
+### bin/pa
+- forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
+
 ## 2026-04-16
 
 ### Permissions
