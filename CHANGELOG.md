@@ -13,6 +13,10 @@
 ### bin/pa
 - forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
 - `pa update` now starts with `--permission-mode default` so the update flow can prompt for permissions instead of silently blocking under `dontAsk`.
+- new `pa work` CLI shortcut — starts `pa` on the autonomous `/loop work` loop.
+
+### CLAUDE.md
+- note that `pa` starts in `don't ask mode` and that the agent should tell the user to exit it (`shift+tab`) when it needs a permission it doesn't have.
 
 ### Setup skill
 - spell out the clone step: clone into `workspace/<repo>` and add the repo to the workspace.md table. First-time setup was silently blocked under `dontAsk` because the clone step wasn't explicit.

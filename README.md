@@ -28,7 +28,8 @@ Run `pa` then say `pair` to trigger the [start-of-day](./memory/skills/start-of-
 It will then try to unblock itself and others that are waiting for your input.
 
 Give `pa` tasks to work by telling it to add them to its todos.
-Then say `loop work` for `pa` to start working on them autonomously on a repeating [work](./memory/skills/work.md) 10m schedule.
+Then say `/loop work` for `pa` to start working on them autonomously on a repeating [work](./memory/skills/work.md) loop.
+You can also start `pa` on the work loop from the CLI with `pa work`.
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `/loop work` again to continue autonomously.
 
@@ -39,11 +40,12 @@ Run `pa save` from your terminal whenever you want to commit daily notes and tas
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
 - `pa install`: installs `pa` into `$PATH`
-- `pa save`: git commit changes to tasks and daily note
+- `pa save`: git commit changes to tasks and daily notes
 - `pa today`: show todays daily note
 - `pa tasks`: lists task status
 - `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
+- `pa work`: start `pa` on the autonomous work loop (`/loop work`)
 - `pa update`: pull new changes to `pa` and merge them into the current branch
 
 
