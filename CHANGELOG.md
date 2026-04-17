@@ -15,7 +15,10 @@
 - `pa update` now starts with `--permission-mode default` so the update flow can prompt for permissions instead of silently blocking under `dontAsk`.
 
 ### Setup skill
-- tell the agent to clone workspace repos with `gh repo clone <owner>/<repo> workspace/<repo>` and to add each repo to the workspace.md table. `gh repo clone *` is pre-approved under `dontAsk` but `git clone` is not, so without this guidance the first-time setup was silently blocked.
+- spell out the clone step: clone into `workspace/<repo>` and add the repo to the workspace.md table. First-time setup was silently blocked under `dontAsk` because the clone step wasn't explicit.
+
+### Permissions
+- add `Bash(git clone * workspace/*)` so `git clone` into `workspace/` works alongside the existing `gh repo clone *`.
 
 ## 2026-04-16
 
