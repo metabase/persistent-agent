@@ -14,6 +14,9 @@
 - forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
 - `pa update` now starts with `--permission-mode default` so the update flow can prompt for permissions instead of silently blocking under `dontAsk`.
 
+### Setup skill
+- tell the agent to clone workspace repos with `gh repo clone <owner>/<repo> workspace/<repo>` and to add each repo to the workspace.md table. `gh repo clone *` is pre-approved under `dontAsk` but `git clone` is not, so without this guidance the first-time setup was silently blocked.
+
 ## 2026-04-16
 
 ### Permissions
