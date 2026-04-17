@@ -62,12 +62,10 @@ This mode will use use a classifier to automatically determine which promps are 
 
 ## Updating, modifying, and contributing back
 
-First you'll need to exit `don't ask mode` mode to allow `pa` to modify itself.
-
 Run `pa update` to fetch and merge the latest changes from upstream. Conflicts are resolved automatically using `CHANGELOG.md` for context.
 
 You can and should edit `pa` to suit the way you work. The `memory` folder has all the instructions on how `pa` works as markdown files. 
-Edit them directly or work with `pa` on self-modification tasks. 
+Edit them directly or work with `pa` on self-modification tasks. You'll need to exit `don't ask mode` mode to allow `pa` to modify itself.
 
 If you want to contribute them back to the `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
 

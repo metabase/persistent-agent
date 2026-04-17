@@ -12,6 +12,7 @@
 
 ### bin/pa
 - forward args with `"$@"` instead of `"$*"`; flags like `pa --permission-mode dontAsk` now work. Multi-word prompts still work (claude accepts variadic positional).
+- `pa update` now starts with `--permission-mode default` so the update flow can prompt for permissions instead of silently blocking under `dontAsk`.
 
 ## 2026-04-16
 
