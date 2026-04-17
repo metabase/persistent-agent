@@ -17,13 +17,15 @@ For each task with a PR:
 - Still waiting -> leave in `waiting`
 
 
-## New backlog tasks
+## New backlog and todo tasks
 
 New backlog tasks can come directly from your principal, or from tools in workspace.md that have an Updates column entry.
 
 Tasks coming from tools always go into the backlog, regardless of their status in the tool.
 
 Ignore pieces of work that don't seem active, or that seem like someone else is already on them.
+
+If a task isn't in the task format (created via `pa todo`/`pa backlog`), normalize it before working on it.
 
 
 ## Waiting with Monitor vs run_in_background
