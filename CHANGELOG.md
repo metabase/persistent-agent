@@ -2,6 +2,7 @@
 
 ### Tasks skill
 - add `repo chores` (lint, format, typecheck, pre-PR checks) as an explicit phase before draft PR review
+- replace `type` (single value) with `tags` (open-ended list); tags double as skill hints (e.g. `self-modification` → run that skill). Existing tasks should be migrated to this new format.
 
 ## 2026-04-16
 

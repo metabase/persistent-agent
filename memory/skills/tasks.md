@@ -25,7 +25,8 @@ Tasks use YAML frontmatter for structured metadata. The folder encodes status, s
 ---
 title: Short descriptive title
 created: 2026-04-08T10:30:00Z
-type: feature # bug | feature | refactor | chore | docs | self-modification | ...
+tags:
+  - feature
 links:
   - my-repo/my-branch-name
   - https://example.com/issue/ABC-1234
@@ -43,7 +44,9 @@ What's in and out of scope. Constraints, acceptance criteria.
 - 2026-04-09T16:00:00Z: Implemented X. CI green.
 ```
 
-Titles containing colons or special characters should be quoted. Use `repo/branch` notation for workspace branches. Only include fields that apply, e.g. omit `links` when there are none. 
+Titles containing colons or special characters should be quoted. Use `repo/branch` notation for workspace branches. Only include fields that apply, e.g. omit `links` when there are none.
+
+Tags are open-ended and double as skill hints. When a tag matches an available skill name (e.g. `self-modification`), invoke that skill while working the task. Use multiple tags freely. Some common ones: bug, feature, refactor, chore, docs, self-modification.
 
 Use full ISO 8601 timestamps (UTC) in changelog entries and the `created` field.
 
