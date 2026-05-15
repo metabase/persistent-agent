@@ -28,6 +28,14 @@ Ignore pieces of work that don't seem active, or that seem like someone else is 
 If a task isn't in the task format (created via `pa todo`/`pa backlog`), normalize it before working on it.
 
 
+## Parallel sub-agents in workspace repos
+
+When dispatching sub-agents to work on a workspace repo, check the `Parallel worktrees` column in `memory/workspace.md`:
+- `yes` — pass `isolation: "worktree"` to the `Agent` tool so each sub-agent gets its own clean checkout. Safe to run in parallel.
+- `no` — the repo has shared local state that breaks under parallel checkouts. Run sub-agents sequentially in the primary checkout.
+- `?` — unknown; ask the user before parallelizing.
+
+
 ## Waiting with Monitor vs run_in_background
 
 When a task enters `waiting` (CI running, PR under review), choose the right tool:

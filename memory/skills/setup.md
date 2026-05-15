@@ -8,6 +8,7 @@ Make sure that:
 - you ask the user what repositories should be part of their workspace
   - clone each into `workspace/<repo>` (either `gh repo clone` or `git clone`)
   - add the repo to the `## Repositories` table in `memory/workspace.md`
+  - for each repo, ask whether it supports parallel worktrees (i.e. multiple instances working on it simultaneously without local-state conflicts) and fill in the column
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create or update if not

@@ -1,5 +1,11 @@
 ## 2026-05-15
 
+### Parallel-worktrees metadata
+- add a `Parallel worktrees` column to the Repositories table in `memory/workspace.md`. Indicates whether multiple instances can work on the repo at the same time via `git worktree` without local-state conflicts (docker ports, dev-server caches, lockfiles).
+- when dispatching sub-agents against a repo marked `yes`, pass `isolation: "worktree"` to the `Agent` tool so each gets a clean checkout. The work skill encodes this.
+- setup skill now asks for this value when adding a repo.
+- migration note for existing users: existing rows in `memory/workspace.md` get a `?` placeholder; ask the user so you can fill in `yes`/`no` per repo.
+
 ### `memory/feedback/`
 - add `memory/feedback/` (with a `.gitkeep`) as the standard location for feedback memories — guidance the user has given about how to approach work. Reference it in the `memory/skills/memory.md` initial-structure block.
 
