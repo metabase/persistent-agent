@@ -1,5 +1,8 @@
 ## 2026-05-15
 
+### `memory/feedback/`
+- add `memory/feedback/` (with a `.gitkeep`) as the standard location for feedback memories — guidance the user has given about how to approach work. Reference it in the `memory/skills/memory.md` initial-structure block.
+
 ### `principal` → `user`
 - rename `memory/principal.md` → `memory/user.md`. Update CLAUDE.md core memories reference and all skill files that mentioned `principal` / `Principal`.
 - remove `memory/glossary.md`. The glossary's main purpose was defining `agent` / `principal` — with `user` replacing `principal` the pair becomes self-evident, and the `Metabase` row was personal-config anyway.
