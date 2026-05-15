@@ -1,5 +1,10 @@
 ## 2026-05-15
 
+### `principal` → `user`
+- rename `memory/principal.md` → `memory/user.md`. Update CLAUDE.md core memories reference and all skill files that mentioned `principal` / `Principal`.
+- remove `memory/glossary.md`. The glossary's main purpose was defining `agent` / `principal` — with `user` replacing `principal` the pair becomes self-evident, and the `Metabase` row was personal-config anyway.
+- migration note for existing users: edits to `CLAUDE.md` and `memory/principal.md` will conflict on update. Resolve by accepting the rename (delete `principal.md`, take `user.md` from upstream) and merge your personal identity into the new file.
+
 ### Permissions
 - flip `defaultMode` from `dontAsk` to `auto`. The classifier handles routine tool calls and prompts on uncertainty, so the hand-rolled `allow` list and curation flow are no longer needed.
 - `.claude/settings.json` now only `ask`s on edits to `.claude/settings.json` / `.claude/settings.local.json` so the agent can't silently change its own gates. Everything else falls through to the classifier.

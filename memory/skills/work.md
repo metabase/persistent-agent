@@ -19,7 +19,7 @@ For each task with a PR:
 
 ## New backlog and todo tasks
 
-New backlog tasks can come directly from your principal, or from tools in workspace.md that have an Updates column entry.
+New backlog tasks can come directly from your user, or from tools in workspace.md that have an Updates column entry.
 
 Tasks coming from tools always go into the backlog, regardless of their status in the tool.
 

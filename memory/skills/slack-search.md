@@ -7,9 +7,9 @@ The `after:YYYY-MM-DD` query modifier does NOT work reliably. Instead use the `a
 Example: to search the last hour, compute `$(date -u -v-1H +%s)` and pass it as the `after` parameter.
 
 
-### Searching for @-mentions of the principal
+### Searching for @-mentions of the user
 
-Use `to:me` or `to:<@U04S45X3FLN>` in the query string. This finds messages that @-mention the principal, including DMs.
+Use `to:me` or `to:<@U04S45X3FLN>` in the query string. This finds messages that @-mention the user, including DMs.
 
 
 ### Searching for @-mentions of a user group (e.g. @cloud)

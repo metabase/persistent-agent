@@ -3,8 +3,8 @@ Make sure that:
   - run `claude mcp list` for mcp tool status
   - if not, prompt the user to connect, giving them instructions about the commands they should run
   - for mcps the user should use `/mcp` to manage them
-- principal, workspace, and glossary information relevant to them is filled in from tools
-  - if not, prompt for the principal's identity and fill it in
+- user and workspace information relevant to them is filled in from tools
+  - if not, prompt for the user's identity and fill it in
 - ask the user what repositories should be part of their workspace
   - clone each into `workspace/<repo>` (either `gh repo clone` or `git clone`)
   - add the repo to the `## Repositories` table in `memory/workspace.md`
