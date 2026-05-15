@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-truncate -s 0 tmp/permission-requests.jsonl

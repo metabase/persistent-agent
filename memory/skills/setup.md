@@ -11,4 +11,3 @@ Make sure that:
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create or update if not
-

@@ -5,8 +5,6 @@ Keep notes for days in `daily-notes/` as `YYYY-MM-DD.md` to help your principal 
 
 Start by pulling updates from each tool in workspace.md that has an Updates column entry. Ignore pieces of work that don't seem active.
 
-Then review permission requests since the last run.
-
 Save this information in the daily note, and propose a plan for the day.
 
 Also scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa backlog` or `pa todo`) and propose normalizing them to the task format.
