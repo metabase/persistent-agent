@@ -51,15 +51,9 @@ Run `pa save` from your terminal whenever you want to commit daily notes and tas
 
 ## Permissions
 
-`pa` starts in [`don't ask mode`](https://code.claude.com/docs/en/permission-modes#allow-only-pre-approved-tools-with-dontask-mode) so only pre-approved tools are used and work isn't interrupted by permission prompts.
-If `pa` needs to call something its not allowed to for a task, it will block the task on that permission and move on to other tasks.
+`pa` starts in [`auto mode`](https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode), which uses a claude itself to allow or deny permission prompts. You can edit (or ask `pa` to) `.claude/settings.json` with `ask`/`deny` rules for things that you want to manually control permissions for.
 
-You can switch to other permissions modes with `shift+tab`, but to get back into `don't ask` mode you'll need to restart `pa`.
-If you are getting too many permission requests for things that seem safe, say `review permissions` for `pa` to look at recent permission requests and suggest changes.
-Permission review should also be automatically reviewed during the start-of-day routine.
-
-[`auto mode`](https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode) is an alternative to pre-approving tools.
-This mode will use use a classifier to automatically determine which promps are safe and deny the rest. Use `shift+tab` to switch to it.
+Use `shift+tab` to switch modes if you want stricter or looser behavior.
 
 
 ## Updating, modifying, and contributing back
@@ -67,7 +61,7 @@ This mode will use use a classifier to automatically determine which promps are 
 Run `pa update` to fetch and merge the latest changes from upstream. Conflicts are resolved automatically using `CHANGELOG.md` for context.
 
 You can and should edit `pa` to suit the way you work. The `memory` folder has all the instructions on how `pa` works as markdown files. 
-Edit them directly or work with `pa` on self-modification tasks. You'll need to exit `don't ask mode` mode to allow `pa` to modify itself.
+Edit them directly or work with `pa` on self-modification tasks.
 
 If you want to contribute them back to the `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
 

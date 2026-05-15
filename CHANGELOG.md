@@ -1,3 +1,18 @@
+## 2026-05-15
+
+### Permissions
+- flip `defaultMode` from `dontAsk` to `auto`. The classifier handles routine tool calls and prompts on uncertainty, so the hand-rolled `allow` list and curation flow are no longer needed.
+- `.claude/settings.json` now only `ask`s on edits to `.claude/settings.json` / `.claude/settings.local.json` so the agent can't silently change its own gates. Everything else falls through to the classifier.
+- remove the `PermissionRequest` hook, `.claude/hooks/log-permission-request.sh`, and `scripts/truncate-perms-log` — auto mode means no logged prompts to review.
+- remove the `permissions` skill (`memory/skills/permissions.md` and `.claude/skills/permissions/`) — there's no longer a curation flow to document.
+
+### workspace-cmd retired
+- remove `scripts/workspace-cmd` and the `deny Bash(cd workspace/*)` rule. The wrapper existed because `dontAsk` mode couldn't pattern-match across compound commands like `cd workspace/foo && git ...`; auto mode reasons about full commands directly, so the wrapper no longer earns its keep. `cd` into `workspace/<repo>` directly.
+- `memory/workspace.md` shortened: drop the "Running commands in workspace repos" section and the workspace-cmd PR example.
+
+### Start-of-day skill
+- drop the "review permission requests" step (no more log to review).
+
 ## 2026-04-17
 
 ### Tasks skill
