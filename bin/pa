@@ -2,7 +2,7 @@
 cd "$(dirname "$0")/.." || exit 1
 
 if [ "$1" = "update" ]; then
-  exec claude --permission-mode default /update
+  exec claude "/update"
 elif [ "$1" = "work" ]; then
   exec claude "/loop work"
 else

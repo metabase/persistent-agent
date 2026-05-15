@@ -1,6 +1,6 @@
 # Persistent Agent
 
-Persistent agent, or `pa`, is a claude-based agent memory, task, and permissions system that allows a principal to delegate work to an agent, and for the agent to act on behalf of the principal.
+Persistent agent, or `pa`, is a claude-based agent memory, task, and permissions system that allows a user to delegate work to an agent, and for the agent to act on behalf of the user.
 
 `pa`'s current state is stored as markdown files and is meant to be easily interpretable and customized.
 

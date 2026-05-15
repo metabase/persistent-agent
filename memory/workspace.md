@@ -9,10 +9,12 @@
 
 
 ## Repositories
-| Name             | URL                                          |
-| ---------------- | -------------------------------------------- |
+| Name             | URL                                          | Parallel worktrees |
+| ---------------- | -------------------------------------------- | ------------------ |
 
 Repositories are cloned inside `workspace/<name>/`. `cd` into them to run commands.
+
+The "Parallel worktrees" column indicates whether multiple instances can work on the repo at the same time via `git worktree`. Some repos have shared local state (fixed docker-compose ports, dev-server caches, lockfiles) that breaks under parallel checkouts, mark these `no`.
 
 
 ## Creating commits and PRs
