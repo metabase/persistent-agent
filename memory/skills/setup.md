@@ -3,11 +3,12 @@ Make sure that:
   - run `claude mcp list` for mcp tool status
   - if not, prompt the user to connect, giving them instructions about the commands they should run
   - for mcps the user should use `/mcp` to manage them
-- principal, workspace, and glossary information relevant to them is filled in from tools
-  - if not, prompt for the principal's identity and fill it in
-- ask the user what repositories should be part of their workspace
+- user and workspace information relevant to them is filled in from tools
+  - if not, prompt for the user's identity and fill it in
+- you ask the user what repositories should be part of their workspace
   - clone each into `workspace/<repo>` (either `gh repo clone` or `git clone`)
   - add the repo to the `## Repositories` table in `memory/workspace.md`
+  - for each repo, ask whether it supports parallel worktrees (i.e. multiple instances working on it simultaneously without local-state conflicts) and fill in the column
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create or update if not

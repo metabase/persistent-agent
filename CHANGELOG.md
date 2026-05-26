@@ -1,5 +1,19 @@
 ## 2026-05-15
 
+### Parallel-worktrees metadata
+- add a `Parallel worktrees` column to the Repositories table in `memory/workspace.md`. Indicates whether multiple instances can work on the repo at the same time via `git worktree` without local-state conflicts (docker ports, dev-server caches, lockfiles).
+- when dispatching sub-agents against a repo marked `yes`, pass `isolation: "worktree"` to the `Agent` tool so each gets a clean checkout. The work skill encodes this.
+- setup skill now asks for this value when adding a repo.
+- migration note for existing users: existing rows in `memory/workspace.md` get a `?` placeholder; ask the user so you can fill in `yes`/`no` per repo.
+
+### `memory/feedback/`
+- add `memory/feedback/` (with a `.gitkeep`) as the standard location for feedback memories — guidance the user has given about how to approach work. Reference it in the `memory/skills/memory.md` initial-structure block.
+
+### `principal` → `user`
+- rename `memory/principal.md` → `memory/user.md`. Update CLAUDE.md core memories reference and all skill files that mentioned `principal` / `Principal`.
+- remove `memory/glossary.md`. The glossary's main purpose was defining `agent` / `principal` — with `user` replacing `principal` the pair becomes self-evident, and the `Metabase` row was personal-config anyway.
+- migration note for existing users: edits to `CLAUDE.md` and `memory/principal.md` will conflict on update. Resolve by accepting the rename (delete `principal.md`, take `user.md` from upstream) and merge your personal identity into the new file.
+
 ### Permissions
 - flip `defaultMode` from `dontAsk` to `auto`. The classifier handles routine tool calls and prompts on uncertainty, so the hand-rolled `allow` list and curation flow are no longer needed.
 - `.claude/settings.json` now only `ask`s on edits to `.claude/settings.json` / `.claude/settings.local.json` so the agent can't silently change its own gates. Everything else falls through to the classifier.
