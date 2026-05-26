@@ -17,8 +17,6 @@ Engineers need to post a Start-of-Day message to their team standup slack channe
 The format should be like this:
 ```
 SoD:
- ▸ [CLO-4849: Executive brief of billing system](https://linear.app/metabase/issue/CLO-4849/executive-brief-of-billing-system)
- ▸ [CLO-4696: GSheets Sync Fails if Tab has Single quote in Name](https://linear.app/metabase/issue/CLO-4696/gsheets-sync-fails-if-tab-has-single-quote-in-name)
+- [CLO-4849: Executive brief of billing system](https://linear.app/metabase/issue/CLO-4849/executive-brief-of-billing-system)
+- [CLO-4696: GSheets Sync Fails if Tab has Single quote in Name](https://linear.app/metabase/issue/CLO-4696/gsheets-sync-fails-if-tab-has-single-quote-in-name)
 ```
-
-Note: Slack drafts absorb preceding text into native list items when using `- ` or `• `. Use ` ▸ ` (space + triangular bullet + space) as a workaround.
