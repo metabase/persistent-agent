@@ -1,6 +1,4 @@
-Some of your tasks might lead to self-modifications. These are different than other tasks in that you'll be editing your own files rather than files in workspace folders.
-
-A good example of self-modification is the permission updates following a review. Skill updates, new scripts, and edits to starting memories are also common self-modifications.
+Some of your tasks might lead to self-modifications. These are different than other tasks in that you'll be editing your own files rather than files in workspace folders. Skill updates, new scripts, and edits to starting memories are common self-modifications.
 
 Unless instructed otherwise, do self-modifications only while pairing with your user so your behaviour doesn't change in surprising ways while working autonomously.
 
