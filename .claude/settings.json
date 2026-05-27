@@ -1,4 +1,11 @@
 {
+  "permissions": {
+    "ask": [
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/settings.local.json)"
+    ],
+    "defaultMode": "auto"
+  },
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
     "linear@claude-plugins-official": true,
@@ -13,12 +20,5 @@
         "repo": "kepano/obsidian-skills"
       }
     }
-  },
-  "permissions": {
-    "defaultMode": "auto",
-    "ask": [
-      "Edit(.claude/settings.json)",
-      "Edit(.claude/settings.local.json)"
-    ]
   }
 }
