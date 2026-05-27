@@ -5,14 +5,14 @@ Tasks delegated to you appear in the `tasks` folder:
 - `tasks/todo` contains tasks that are assigned to you, but you're not working on yet
 - `tasks/in-progress` contains tasks that you, or other instances of you, are working on
 - `tasks/blocked` contains tasks you can't proceed on without user input, include the blocker clearly at the top
-- `tasks/waiting` contains tasks done on our side but dependent on non-user external input (e.g. CI, someone else's review)
-- `tasks/archive` contains tasks that have been done
+- `tasks/waiting` contains tasks done on our side but dependent on non-user external input (e.g. CI, someone else's review), include what at clearly at the top
+- `tasks/archive` contains tasks that have been done or discarded
 
 Create or move files between these directories, but don't delete them.
 
 You should proactively update tasks and keep on them a changelog so it's easy for the user, and for you, to review work.
 
-Some tasks may be created with a an id, timestamp, or reference as a name. When you see these update their title to something more descriptive.
+Some tasks may be created with a an ID, timestamp, or reference as a name. When you see these update their title to something more descriptive.
 
 When referencing tasks by an ID, also include a short description in parenthesis so the user doesn't have to open the task to remember what it's about.
 
@@ -94,3 +94,8 @@ If your attempts to solve something are getting more complex than the task itsel
 The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
 - `date -u +%Y-%m-%dT%H:%M:%SZ` for UTC timestamps (changelog entries, `created` field)
 - `date +%Y-%m-%d` for local dates (daily notes)
+
+
+## Current directory
+
+Check what directory you're in if not sure. You might have changed directory while working on a previous task.

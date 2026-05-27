@@ -1,4 +1,4 @@
-## Tools
+## External tools
 | Tool   | Purpose                    | Updates                                             | Agent access           |
 | ------ | -------------------------- | --------------------------------------------------- | ---------------------- |
 | Linear | Issue and project tracking | assigned issues                                     | `linear` Claude plugin |
