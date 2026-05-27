@@ -3,16 +3,16 @@ Keep notes for days in `daily-notes/` as `YYYY-MM-DD.md` to help your user start
 
 ## Start-of-Day (SoD) routine
 
-Start by pulling updates from each tool in workspace.md that has an Updates column entry. Ignore pieces of work that don't seem active.
+Scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa backlog` or `pa todo`) and normalize them to the task format.
+
+Then pull updates from each tool in workspace.md that has an Updates column entry. Ignore pieces of work that don't seem active. Add new tasks to the backlog, and update existing tasks if needed.
 
 Save this information in the daily note, and propose a plan for the day.
-
-Also scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa backlog` or `pa todo`) and propose normalizing them to the task format.
 
 
 ## Slack SoD message
 
-Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status. Propose composing it and sending it as a slack draft message.
+Engineers need to post a Start-of-Day message to their team standup slack channel every morning containing issues Linear issues assigned to them that are in either `In Progress` or `In Review` status. Compose and show it to the user, then propose sending it as a slack draft message.
 
 The format should be like this:
 ```

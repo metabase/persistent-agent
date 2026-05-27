@@ -1,6 +1,6 @@
 # Persistent Agent
 
-Persistent agent, or `pa`, is a claude-based agent memory, task, and permissions system that allows a user to delegate work to an agent, and for the agent to act on behalf of the user.
+Persistent agent, or `pa`, is a claude-based agent memory, and task system that allows a user to delegate work to an agent, and for the agent to act on behalf of the user.
 
 `pa`'s current state is stored as markdown files and is meant to be easily interpretable and customized.
 
@@ -9,22 +9,21 @@ Persistent agent, or `pa`, is a claude-based agent memory, task, and permissions
 
 You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quickstart) installed. 
 
-Run `bin/pa install` to add `pa` to your global `$PATH`.
-If you want to run multiple `pa` locally, you can use `bin/pa` instead of globally installed `pa`.
+Run `bin/pa install` to add `pa` to your global `$PATH`. 
+You can call `pa` it from any folder, but it will always run in this folder.
+If you want to run multiple `pa`, you can use the local `bin/pa` instead of globally installed `pa`.
 
 Then run `pa setup <your name>` to perform first-time user setup.
-It will ask you for the repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
+It will ask you for the tools and repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
 It will also tell you how to connect tools it needs to work.
-
-After installing `pa` you can call it from any folder, but it will always run in this folder.
 
 
 ## Getting started
 
 You use `pa` by alternating between pairing with the agent and leaving the agent to work autonomously.
 
-Run `pa` then say `pair` to trigger the [start-of-day](./memory/skills/start-of-day.md) routine.
-`pa` will look at tasks, linear issues, and PRs to propose a day plan and a slack start-of-day draft.
+Run `pa` then say `sod` or `pair` to trigger the [start-of-day](./memory/skills/start-of-day.md) routine.
+`pa` will look at tasks and updates from tools to propose a day plan and a slack start-of-day draft.
 It will then try to unblock itself and others that are waiting for your input.
 
 Give `pa` tasks to work by telling it to add them to its todos.
@@ -51,7 +50,8 @@ Run `pa save` from your terminal whenever you want to commit daily notes and tas
 
 ## Permissions
 
-`pa` starts in [`auto mode`](https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode), which uses a claude itself to allow or deny permission prompts. You can edit (or ask `pa` to) `.claude/settings.json` with `ask`/`deny` rules for things that you want to manually control permissions for.
+`pa` starts in [`auto mode`](https://code.claude.com/docs/en/permission-modes#eliminate-prompts-with-auto-mode), which uses Claude itself to allow or deny permission prompts.
+You can edit (or ask `pa` to) `.claude/settings.json` with `ask`/`deny` rules for things that you want to manually control permissions for.
 
 Use `shift+tab` to switch modes if you want stricter or looser behavior.
 
