@@ -1,8 +1,8 @@
 ## Task folders
 
 Tasks delegated to you appear in the `tasks` folder:
-- `tasks/backlog` contains tasks that you're aware of
-- `tasks/todo` contains tasks that are assigned to you, but you're not working on yet
+- `tasks/backlog` contains tasks that you're aware of. New tasks default here, regardless of their status in external trackers.
+- `tasks/todo` contains tasks the user has assigned you to work on, but you're not working on yet. A task only moves from backlog to todo when the user assigns it to you.
 - `tasks/in-progress` contains tasks that you, or other instances of you, are working on
 - `tasks/blocked` contains tasks you can't proceed on without user input, include the blocker clearly at the top
 - `tasks/waiting` contains tasks done on our side but dependent on non-user external input (e.g. CI, someone else's review), include what at clearly at the top

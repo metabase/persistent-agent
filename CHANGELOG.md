@@ -1,3 +1,8 @@
+## 2026-05-28
+
+### Task folder defaults
+- `memory/skills/tasks.md`: new tasks now default to `tasks/backlog`, regardless of their status in external trackers (e.g. a Linear issue that's "In Progress" but has no local work). A task only moves to `tasks/todo` when the user explicitly assigns it. Previously the agent could file freshly-discovered tasks straight into `todo`.
+
 ## 2026-05-15
 
 ### Parallel-worktrees metadata
