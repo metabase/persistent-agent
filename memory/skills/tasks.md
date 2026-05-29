@@ -75,20 +75,6 @@ When creating PRs, mark then as draft so that your user can review them before o
 If you're missing tooling for common dev tasks, like the ability to run tests or builds, block on it and ask your user to unblock you.
 
 
-## Modes of operation
-
-### Pair mode
-
-User is present. Follow the start-of-day routine if there's no daily note yet, otherwise go over the current status of your tasks.
-Focus on review, planning, and unblocking instead of execution. Wait until you go to work mode to work on tasks.
-
-### Work mode
-
-Work autonomously, likely in a background process. Be as independent as possible because the user will likely not be available to answer questions or approve permission requests.
-
-If your attempts to solve something are getting more complex than the task itself (increasingly exotic workarounds, repeated failures, escalating approaches) stop and move the task to `blocked` with a clear description of what's not working. Don't spiral.
-
-
 ## Current time
 
 The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
