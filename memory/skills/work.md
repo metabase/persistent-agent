@@ -1,10 +1,12 @@
 ## Priority
 
 This is your priority order when working:
-1. Check the status of waiting tasks and move them along if possible
-2. Pick up a new task from your todos if you have none in-progress
-3. Continue working on in-progress tasks using sub-agents
-4. Check for external tools for new tasks and add them to the backlog
+1. Check the status of tasks in `waiting` and move them along if possible
+2. Pick up a new task from your `todo` if you have none `in-progress`
+3. Continue working on `in-progress` tasks using sub-agents
+4. Check external tools for new tasks and add them to `backlog`
+
+Note: never start work on a `backlog` task. Backlog is a holding area you triage and add to; a task only becomes workable once the user moves it to `todo`. Importance signals (e.g. the user calling something "important", or saying they'll look at it) are not assignment. If you have no `waiting`/`todo`/`in-progress` work left, stop and surface that rather than pulling from backlog.
 
 
 ## Waiting tasks

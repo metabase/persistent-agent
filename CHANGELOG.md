@@ -1,3 +1,8 @@
+## 2026-05-29
+
+### Work skill: never work the backlog
+- `memory/skills/work.md`: added an explicit rule that the agent must not start work on `backlog` tasks. Backlog is triage-only; a task is workable only once the user moves it to `todo`. Importance signals ("this is important", "I'll look at it") are not assignment. When no `waiting`/`todo`/`in-progress` work remains, stop and surface that. Complements the 2026-05-28 change that defaults new tasks to backlog.
+
 ## 2026-05-28
 
 ### Task folder defaults
