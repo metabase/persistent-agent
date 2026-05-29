@@ -1,5 +1,9 @@
 ## 2026-05-29
 
+### Modes of operation extracted to its own skill
+- New `memory/skills/modes.md` (+ `.claude/skills/modes/SKILL.md` stub, eagerly loaded via `@memory/skills/modes.md` in CLAUDE.md). The "## Modes of operation" section was **moved out of `memory/skills/tasks.md`** — if you have local edits to that section, they now belong in `modes.md`, not `tasks.md`. Pair/work mode are central enough to be a first-class skill rather than buried in tasks.
+- New behavior in work mode: entering work mode via a natural-language phrase ("work", "switch to work mode", or similar) now immediately starts `/loop 30m work` instead of a single pass. The fixed 30m interval re-scans tasks and external trackers so externally-assigned work is picked up. A directly-typed `/work` remains a one-shot. No hook/settings.json — intent recognition is the agent's, and `modes.md` is eagerly loaded so the trigger is always in context.
+
 ### Work skill: never work the backlog
 - `memory/skills/work.md`: added an explicit rule that the agent must not start work on `backlog` tasks. Backlog is triage-only; a task is workable only once the user moves it to `todo`. Importance signals ("this is important", "I'll look at it") are not assignment. When no `waiting`/`todo`/`in-progress` work remains, stop and surface that. Complements the 2026-05-28 change that defaults new tasks to backlog.
 

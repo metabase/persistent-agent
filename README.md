@@ -20,17 +20,17 @@ It will also tell you how to connect tools it needs to work.
 
 ## Getting started
 
-You use `pa` by alternating between pairing with the agent and leaving the agent to work autonomously.
+You use `pa` by alternating between [modes](./memory/skills/modes.md): pairing with the agent, and leaving the agent to work autonomously.
 
 Run `pa` then say `sod` or `pair` to trigger the [start-of-day](./memory/skills/start-of-day.md) routine.
 `pa` will look at tasks and updates from tools to propose a day plan and a slack start-of-day draft.
 It will then try to unblock itself and others that are waiting for your input.
 
 Give `pa` tasks to work by telling it to add them to its todos.
-Then say `/loop work` for `pa` to start working on them autonomously on a repeating [work](./memory/skills/work.md) loop.
+Then say `work` and `pa` starts working on them autonomously on a repeating [work](./memory/skills/work.md) loop, checking for newly-assigned work every 30 minutes.
 You can also start `pa` on the work loop from the CLI with `pa work`.
 
-Say `pair` to get the current status from `pa`, unblock or work with it. Then say `/loop work` again to continue autonomously.
+Say `pair` to get the current status from `pa`, unblock or work with it. Then say `work` again to continue autonomously.
 
 Run `pa save` from your terminal whenever you want to commit daily notes and task changes to git.
 
@@ -44,7 +44,6 @@ Run `pa save` from your terminal whenever you want to commit daily notes and tas
 - `pa tasks`: lists task status
 - `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
-- `pa work`: start `pa` on the autonomous work loop (`/loop work`)
 - `pa update`: pull new changes to `pa` and merge them into the current branch
 
 
