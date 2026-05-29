@@ -20,3 +20,8 @@ SoD:
 - [CLO-4849: Executive brief of billing system](https://linear.app/metabase/issue/CLO-4849/executive-brief-of-billing-system)
 - [CLO-4696: GSheets Sync Fails if Tab has Single quote in Name](https://linear.app/metabase/issue/CLO-4696/gsheets-sync-fails-if-tab-has-single-quote-in-name)
 ```
+
+
+## Save
+
+Once the daily note, tasks, and Slack draft are done, run `pa save` (`bin/pa-save`) to commit the daily-note and task changes to git. It only stages `tasks/` and `daily-notes/`, so it won't sweep up unrelated working-tree changes.
