@@ -1,3 +1,8 @@
+## 2026-06-09
+
+### Minimal verbosity in PRs, commits, and code comments
+- `memory/workspace.md` "Creating commits and PRs": detailed reasoning, investigation trails, hypotheses, and iterative (often-wrong) notes stay in the **task file**, not in coworker-facing artifacts. PR body = issue/task ref + at most a one-line "what"; commit message = one terse line; code comments sparse, only what the code can't say. When work is ready to present, compose a proper PR description. Rationale: coworkers read PRs/code, and reasoning meant for you/the user misleads them when it later turns out wrong. Sharpens the prior soft "be terse" guidance.
+
 ## 2026-05-29
 
 ### SoD ends with `pa save`

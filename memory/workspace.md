@@ -19,8 +19,11 @@ The "Parallel worktrees" column indicates whether multiple instances can work on
 
 ## Creating commits and PRs
 
-When a task results in code changes, be terse in commits and PR messages.
-It's likely that changes will need a lot of iteration before they are ready, so we don't want to be very descriptive of things that might change a lot and overwhelm readers.
+PR text, commit messages, and code comments are read by coworkers. Detailed reasoning, investigation trails, hypotheses, and anything iterative (and often wrong) are for you and the user. These live in the task file, which already holds them. Keep the shared artifacts minimal so a reader isn't wading through notes meant for someone else, or misled when those notes turn out wrong. Once the work is ready to be presented to others, they should compose a good PR description themselves.
+
+- PR body: the issue/task it addresses, plus at most a one-line "what." No rationale, alternatives, hedging, or test logs.
+- Commit messages: one terse line.
+- Code comments: sparse, matching surrounding density; explain only what the code can't say itself.
 
 Create PRs using this workflow:
 1. Push the branch first
