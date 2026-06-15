@@ -1,3 +1,11 @@
+## 2026-06-15
+
+### License, README polish, and pre-open-source cleanup
+- Added an MIT `LICENSE` (Copyright Metabase).
+- `README.md`: clarified install (fork first, clone, local vs global `pa`), dropped a stale `pa save` line, softened "the `pa` repo" to "a shared `pa` repo".
+- `memory/skills/start-of-day.md`: replaced the two real example Linear issues in the SoD message format with generic placeholders (`ABC-123`/`your-org`), so the public template carries no internal issue references.
+- `README.md`: genericized the setup example from `metabase/harbormaster` (a private repo) to `your-org/your-repo`.
+
 ## 2026-06-09
 
 ### Minimal verbosity in PRs, commits, and code comments
