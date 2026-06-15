@@ -15,7 +15,7 @@ You can call `pa` it from any folder, but it will always run in this folder.
 If you want to run multiple `pa`, or if you don't want a global install, you can use the local `bin/pa` instead of globally installed `pa`.
 
 Then run `pa setup <your name>` to perform first-time user setup.
-It will ask you for the tools and repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
+It will ask you for the tools and repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `your-org/your-repo`.
 It will also tell you how to connect tools it needs to work.
 
 

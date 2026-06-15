@@ -17,8 +17,8 @@ Engineers need to post a Start-of-Day message to their team standup slack channe
 The format should be like this:
 ```
 SoD:
-- [CLO-4849: Executive brief of billing system](https://linear.app/metabase/issue/CLO-4849/executive-brief-of-billing-system)
-- [CLO-4696: GSheets Sync Fails if Tab has Single quote in Name](https://linear.app/metabase/issue/CLO-4696/gsheets-sync-fails-if-tab-has-single-quote-in-name)
+- [ABC-123: Short issue title](https://linear.app/your-org/issue/ABC-123/short-issue-title)
+- [ABC-456: Another issue title](https://linear.app/your-org/issue/ABC-456/another-issue-title)
 ```
 
 
