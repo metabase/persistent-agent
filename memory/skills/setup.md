@@ -6,7 +6,7 @@ Make sure that:
   - create/update/remove as needed
 - External tools in `memory/workspace.md` are filled in and up to date
   - check if the tools you have listed are the ones the user uses
-    - remove the ones the user doesn't need from the list, and from .claude/settings.json if they are claude plugins
+    - remove the ones the user doesn't need from the list, from .claude/settings.json if they are claude plugins, and from mentions in skills
   - check access for tools you have listed
   - ask the user what other external tools you should have access to, (e.g. github, notion, linear, figma) and how to access them
     - the most straightforward access is CLI tools, Claude plugins, and MCPs
