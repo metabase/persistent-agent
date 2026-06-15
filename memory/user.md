@@ -5,7 +5,7 @@ Fill in during setup.
 
 ## AI use policy
 
-We’re starting to use LLMs/MCPs/GPTs and all kinds of other 3-letter acronyms more heavily across Metabase. This is great, and all kinds of exciting things are starting to take shape.
+We’re starting to use LLMs/MCPs/GPTs and all kinds of other 3-letter acronyms more heavily. This is great, and all kinds of exciting things are starting to take shape.
 
 Before things get too out of control on the slop-train, I want to make sure that some basic expectations are clear about how we use them.
 
