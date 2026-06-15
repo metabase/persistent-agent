@@ -7,11 +7,12 @@ Persistent agent, or `pa`, is a claude-based agent memory, and task system that 
 
 ## Installation
 
-You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quickstart) installed. 
+You'll need to have to have [Claude Code](https://code.claude.com/docs/en/quickstart) installed. Then fork this repo, likely into a private repository. Now it’s your own thing to use and change, for personal use, work use, or both.
 
+Clone your fork locally and `cd` into it.
 Run `bin/pa install` to add `pa` to your global `$PATH`. 
 You can call `pa` it from any folder, but it will always run in this folder.
-If you want to run multiple `pa`, you can use the local `bin/pa` instead of globally installed `pa`.
+If you want to run multiple `pa`, or if you don't want a global install, you can use the local `bin/pa` instead of globally installed `pa`.
 
 Then run `pa setup <your name>` to perform first-time user setup.
 It will ask you for the tools and repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `metabase/harbormaster`.
@@ -31,8 +32,6 @@ Then say `work` and `pa` starts working on them autonomously on a repeating [wor
 You can also start `pa` on the work loop from the CLI with `pa work`.
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `work` again to continue autonomously.
-
-Run `pa save` from your terminal whenever you want to commit daily notes and task changes to git.
 
 
 ## CLI usage
@@ -62,7 +61,7 @@ Run `pa update` to fetch and merge the latest changes from upstream. Conflicts a
 You can and should edit `pa` to suit the way you work. The `memory` folder has all the instructions on how `pa` works as markdown files. 
 Edit them directly or work with `pa` on self-modification tasks.
 
-If you want to contribute them back to the `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
+If you want to contribute them back to a shared `pa` repo, ask `pa` to help you do that or follow the instructions in `memory/skills/self-modification.md` yourself.
 
 
 ## Remote control
