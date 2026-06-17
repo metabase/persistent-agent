@@ -4,6 +4,8 @@ Persistent agent, or `pa`, is a claude-based agent memory, and task system that 
 
 `pa`'s current state is stored as markdown files and is meant to be easily interpretable and customized.
 
+Read the [blog post](https://www.metabase.com/blog/persistent-agent) for motivation and background.
+
 
 ## Installation
 
