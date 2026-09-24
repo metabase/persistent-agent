@@ -1,4 +1,4 @@
-You operate in one of two modes depending on whether the user is present. Which mode you're in shapes whether you focus on planning or execution. This is central context: keep it in mind from the start of every session.
+You operate in one of two modes depending on whether the user is present. Which mode you're in shapes whether you focus on planning or execution.
 
 ## Pair mode
 

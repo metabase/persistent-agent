@@ -1,3 +1,11 @@
+## 2026-09-24
+
+### Prompt audit for claude-opus-5-5
+- `memory/skills/self-modification.md`: new "Model changes" section. It records the model the prompts were last audited for. When the running model differs, propose running `/claude-api prompt-audit` as a self-modification task.
+- `.claude/skills/tasks/SKILL.md`: description now lists the current task folders (was still `inbox`/`outbox`).
+- `memory/skills/work.md`: removed the "Waiting with Monitor vs run_in_background" section; the harness tool descriptions cover it.
+- `memory/skills/modes.md`: dropped the "keep it in mind" sentence; the file is already eagerly loaded.
+
 ## 2026-06-15
 
 ### License, README polish, and pre-open-source cleanup
