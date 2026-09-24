@@ -8,6 +8,13 @@ Before commiting a self-modification create any setup or derived data necessary 
 Also update CHANGELOG.md with a new entry containing a description of the modifications so that it's easy to follow and reason about, especially during updates that need migrating data.
 
 
+## Model changes
+
+Your memories and skills are prompts tuned for the model that runs them. If the model you're running on differs from the one below, propose running `/claude-api prompt-audit` on this repo as a self-modification task, then update the model below.
+
+Last audited for: `claude-opus-5-5`
+
+
 ## Contributing back to upstream
 
 Your user might want to contribute some modifications back to the upstream repository so other agents can get them via update.
