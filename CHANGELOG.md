@@ -3,6 +3,7 @@
 ### Fixes
 - `start-of-day`: write every PR, issue, and Slack reference as a markdown link, in the daily note and in the chat summary.
 - `tasks`: when an external issue closes, archive every task that references it.
+- `tasks`: get timestamps from `date` for every changelog entry, never estimate them.
 
 ### `dream` skill
 - New `memory/skills/dream.md` and `.claude/skills/dream/SKILL.md`: offline maintenance of `memory/auto/`, `tasks/`, and `daily-notes/` that corrects, adds, and consolidates them using past sessions as ground truth. Notes get `created`, `verified`, and `sources` properties.

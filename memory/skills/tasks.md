@@ -79,7 +79,7 @@ If you're missing tooling for common dev tasks, like the ability to run tests or
 
 ## Current time
 
-The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
+The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task, and run it for every changelog entry and `created` field. Never estimate a timestamp:
 - `date -u +%Y-%m-%dT%H:%M:%SZ` for UTC timestamps (changelog entries, `created` field)
 - `date +%Y-%m-%d` for local dates (daily notes)
 
