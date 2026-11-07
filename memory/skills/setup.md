@@ -4,6 +4,7 @@ Make sure that:
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create/update/remove as needed
+- `autoMemoryDirectory` in `.claude/settings.local.json` is the absolute path of this repo's `memory/auto`
 - External tools in `memory/tools.md` are filled in and up to date
   - check if the tools you have listed are the ones the user uses
     - remove the ones the user doesn't need from the list, from .claude/settings.json if they are claude plugins, and from mentions in skills

@@ -1,5 +1,10 @@
 ## 2026-11-07
 
+### Auto memory lives in `memory/auto/`
+- `memory/feedback/` moved to `memory/auto/`. Move local feedback files there, give each auto memory frontmatter (`name`, `description`, `metadata.type`), and list them in a `memory/auto/MEMORY.md` index.
+- `autoMemoryDirectory` must point at the absolute path of `memory/auto`. It goes in the gitignored `.claude/settings.local.json` because it only accepts absolute or `~/` paths. Run `setup` to add it.
+- `memory/skills/memory.md`: curated memories (`user.md`, `projects.md`, `tools.md`, `skills/`) vs learned memories (`auto/`). Dropped the rule against the auto memory `MEMORY.md` index.
+
 ### `memory/workspace.md` split into `memory/projects.md` and `memory/tools.md`
 - `memory/projects.md`: the Repositories section, now `## Projects`, plus "Creating commits and PRs". Columns are `Name | Source | Clone | Parallel`. `Source` replaces `URL` and can be a git URL or a local path the user works in. `Parallel worktrees` is renamed `Parallel`, and now also covers the user working on a local Source. New `Clone` column: `yes` works in a `workspace/<name>` clone (existing rows migrate as `yes`), `no` works in place at Source, which must be in `permissions.additionalDirectories` in `.claude/settings.local.json`. `Parallel` is empty for in place. Clones of a local Source clone from its `origin` remote, add Source as a `local` remote, and copy Source's other remotes (e.g. `upstream`).
 - `memory/tools.md`: the External tools section.
