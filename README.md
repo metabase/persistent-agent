@@ -35,6 +35,9 @@ You can also start `pa` on the work loop from the CLI with `pa work`.
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `work` again to continue autonomously.
 
+`pa` always resumes the last session and will automatically compact context as needed.
+Use `/clear` to wipe the session into a new one, and `/resume` to switch back to a previous session.
+
 
 ## CLI usage
 
@@ -68,6 +71,7 @@ If you want to contribute them back to a shared `pa` repo, ask `pa` to help you 
 
 ## Remote control
 
-Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app.
+Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app. The session will be called `pa`.
 
 To enable it type `/remote-control` inside an existing session, or run `/config` and set **Enable Remote Control for all sessions** to `true`.
+
