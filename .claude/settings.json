@@ -6,6 +6,7 @@
     ],
     "defaultMode": "auto"
   },
+  "autoCompactEnabled": true,
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
     "linear@claude-plugins-official": true,

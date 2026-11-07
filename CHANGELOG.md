@@ -1,3 +1,9 @@
+## 2026-11-07
+
+### `pa` is now a single long running session
+- `bin/pa`: passes `--continue --name pa` to `claude`, including for `pa update`, so `pa` works in one long session. Starts fresh when there is no previous session. Run `claude` directly in the repo for a new session, but note it then becomes the session `pa` resumes.
+- `.claude/settings.json`: sets `autoCompactEnabled: true` so the long session compacts instead of running out of context, even if a user turned auto-compact off.
+
 ## 2026-09-24
 
 ### Prompt audit for claude-opus-5-5

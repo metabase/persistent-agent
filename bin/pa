@@ -2,7 +2,7 @@
 cd "$(dirname "$0")/.." || exit 1
 
 if [ "$1" = "update" ]; then
-  exec claude "/update"
+  exec claude --continue --name pa "/update"
 else
   script="$(dirname "$0")/pa-$1"
   if [ -x "$script" ]; then
@@ -11,4 +11,4 @@ else
   fi
 fi
 
-claude "$@"
+claude --continue --name pa "$@"
