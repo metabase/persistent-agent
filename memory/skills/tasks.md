@@ -10,6 +10,8 @@ Tasks delegated to you appear in the `tasks` folder:
 
 Create or move files between these directories, but don't delete them.
 
+When an external issue closes, archive every task that references it, not only the obvious one. Find them with `grep -rl <ID> tasks/`.
+
 You should proactively update tasks and keep on them a changelog so it's easy for the user, and for you, to review work.
 
 Some tasks may be created with a an ID, timestamp, or reference as a name. When you see these update their title to something more descriptive.
