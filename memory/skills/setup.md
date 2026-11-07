@@ -17,7 +17,7 @@ Make sure that:
 - Projects in `memory/projects.md` are filled in and up to date
   - ask the user what projects you should work on, as git repos or local paths
   - for each, ask whether to clone it or work in place (default: clone git repos)
-    - clone: clone into `workspace/<name>` following the Clone `yes` rules in `memory/projects.md`
+    - clone: clone into `.workspace/<name>` following the Clone `yes` rules in `memory/projects.md`
     - in place: add Source to `permissions.additionalDirectories` in `.claude/settings.local.json`
   - add the project to the `## Projects` table in `memory/projects.md`
   - for each clone, ask whether it supports parallel work (i.e. multiple instances and the user working on it simultaneously without local-state conflicts) and fill in the `Parallel` column, empty for in place
