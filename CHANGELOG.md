@@ -5,6 +5,7 @@
 - `tasks`: when an external issue closes, archive every task that references it.
 - `tasks`: get timestamps from `date` for every changelog entry, never estimate them.
 - `memory`: the repo is an Obsidian vault, so folders that aren't notes get a dot prefix.
+- `tools.md`: `gh --attach` uploads images and videos into PR and issue bodies.
 
 ### `dream` skill
 - New `memory/skills/dream.md` and `.claude/skills/dream/SKILL.md`: offline maintenance of `memory/auto/`, `tasks/`, and `daily-notes/` that corrects, adds, and consolidates them using past sessions as ground truth. Notes get `created`, `verified`, and `sources` properties.
