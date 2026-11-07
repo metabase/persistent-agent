@@ -3,5 +3,12 @@ cd "$(dirname "$0")/.." || exit 1
 
 paths=(tasks/ daily-notes/ memory/auto/ memory/archive/)
 git add "${paths[@]}"
-git diff --cached --quiet -- "${paths[@]}" && { echo "Nothing to commit."; exit 0; }
-git commit -m "save: $(date -u +%Y-%m-%dT%H:%M:%SZ)" -- "${paths[@]}"
+if git diff --cached --quiet -- "${paths[@]}"; then
+  echo "Nothing to commit."
+else
+  git commit -m "save: $(date -u +%Y-%m-%dT%H:%M:%SZ)" -- "${paths[@]}"
+fi
+
+if git remote get-url upstream >/dev/null 2>&1; then
+  git push -q origin HEAD
+fi

@@ -1,5 +1,8 @@
 ## 2026-11-07
 
+### `pa save` pushes to `origin`
+- `bin/pa-save`: after committing, pushes the current branch to `origin`, also when there was nothing to commit. Only when an `upstream` remote exists, so a clone of the shared repo never pushes private tasks to it. Make sure `origin` is private.
+
 ### Fixes
 - `start-of-day`: write every PR, issue, and Slack reference as a markdown link, in the daily note and in the chat summary.
 - `tasks`: when an external issue closes, archive every task that references it.
