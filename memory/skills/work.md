@@ -21,7 +21,7 @@ For each task with a PR:
 
 ## New backlog and todo tasks
 
-New backlog tasks can come directly from your user, or from tools in workspace.md that have an Updates column entry.
+New backlog tasks can come directly from your user, or from tools in `memory/tools.md` that have an Updates column entry.
 
 Tasks coming from tools always go into the backlog, regardless of their status in the tool.
 
@@ -30,10 +30,11 @@ Ignore pieces of work that don't seem active, or that seem like someone else is 
 If a task isn't in the task format (likely created via `pa todo`/`pa backlog`), normalize it before working on it.
 
 
-## Parallel sub-agents in workspace repos
+## Parallel sub-agents in projects
 
-When dispatching sub-agents to work on a workspace repo, check the `Parallel worktrees` column in `memory/workspace.md`:
+When dispatching sub-agents to work on a project, check the `Parallel` column in `memory/projects.md`:
 - `yes` — pass `isolation: "worktree"` to the `Agent` tool so each sub-agent gets its own clean checkout. Safe to run in parallel.
-- `no` — the repo has shared local state that breaks under parallel checkouts. Run sub-agents sequentially in the primary checkout.
+- `no` — the repo has shared local state that breaks under parallel checkouts. Run sub-agents sequentially in the clone.
 - `?` — unknown; ask the user before parallelizing.
+- empty — Clone `no`. Run sub-agents sequentially at Source.
 

@@ -4,7 +4,7 @@ Make sure that:
 - files in `memory/skills/*` have a matching Claude `SKILL` with appropriate metadata in `.claude/skills/*/SKILL.md`
   - these skill files' text, besides yaml metadata, should only contain a reference the memory file e.g. `@<filepath>`
   - create/update/remove as needed
-- External tools in `memory/workspace.md` are filled in and up to date
+- External tools in `memory/tools.md` are filled in and up to date
   - check if the tools you have listed are the ones the user uses
     - remove the ones the user doesn't need from the list, from .claude/settings.json if they are claude plugins, and from mentions in skills
   - check access for tools you have listed
@@ -13,11 +13,13 @@ Make sure that:
     - run `claude mcp list` for mcp tool status, the user should use `/mcp` to manage them
     - help the user set up access for you if needed
   - confirm with the user which tools you are checking for updates in start-of-day
-- Repositories in `memory/workspace.md` are filled in and up to date
-  - ask the user what repositories should be part of their workspace
-  - clone each into `workspace/<repo>` (either `gh repo clone` or `git clone`)
-  - add the repo to the `## Repositories` table in `memory/workspace.md`
-  - for each repo, ask whether it supports parallel worktrees (i.e. multiple instances working on it simultaneously without local-state conflicts) and fill in the column
+- Projects in `memory/projects.md` are filled in and up to date
+  - ask the user what projects you should work on, as git repos or local paths
+  - for each, ask whether to clone it or work in place (default: clone git repos)
+    - clone: clone into `workspace/<name>` following the Clone `yes` rules in `memory/projects.md`
+    - in place: add Source to `permissions.additionalDirectories` in `.claude/settings.local.json`
+  - add the project to the `## Projects` table in `memory/projects.md`
+  - for each clone, ask whether it supports parallel work (i.e. multiple instances and the user working on it simultaneously without local-state conflicts) and fill in the `Parallel` column, empty for in place
 - `memory/user.md` is filled in and up to date
  - prompt for the user's identity if missing
  - use tools you have access to to pull relevant information about the user

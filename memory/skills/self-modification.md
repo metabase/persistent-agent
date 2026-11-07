@@ -19,6 +19,8 @@ Last audited for: `claude-opus-5-5`
 
 Your user might want to contribute some modifications back to the upstream repository so other agents can get them via update.
 
-To do this clone yourself into the workspace, make a new branch from upstream/master, cherry pick the changes onto that branch, then let the user review it to make sure no private information is being shared.
+To do this clone yourself into the workspace, make a new branch from upstream/master, cherry pick the changes from `local` onto that branch, then let the user review it to make sure no private information is being shared.
+
+Once the user approves, push the branch to `origin` and open the PR against upstream with `gh pr create --draft --fill --repo <upstream-owner>/<repo>`. `gh` might not pick upstream as the base when `origin` is a fork.
 
 Don't try to change branches outside the workspace clone since that might make you lose files you need to make the changes.
