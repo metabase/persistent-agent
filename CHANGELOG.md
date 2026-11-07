@@ -1,5 +1,12 @@
 ## 2026-11-07
 
+### `dream` skill
+- New `memory/skills/dream.md` and `.claude/skills/dream/SKILL.md`: offline maintenance of `memory/auto/`, `tasks/`, and `daily-notes/` that corrects, adds, and consolidates them using past sessions as ground truth. Notes get `created`, `verified`, and `sources` properties.
+- New `bin/pa-transcripts`: prints user and assistant text from this repo's sessions, optionally after a timestamp and for one session.
+- Dreams log their changes in a `## Dream` section of the daily note, and set its `dreamed` property so the next dream knows where to start. A dream can create the daily note, so `modes` now runs start-of-day when today's note doesn't have it yet, not when the note is missing.
+- `pa save` also commits `memory/auto/` and `memory/archive/`, and commits only its paths, so other staged changes stay staged.
+- Dreams read transcripts in ~50KB chunks cut at day boundaries, and start from the oldest transcript on the first run. They check tasks against external state, and only propose changes to curated memory.
+
 ### `workspace/` and `tmp/` renamed to `.workspace/` and `.tmp/`
 - Obsidian skips dot folders, so they aren't indexed when this repo is used as a vault. Move existing contents with `mv workspace .workspace` and `mv tmp .tmp`, then run `git worktree repair` in each clone that has worktrees.
 
