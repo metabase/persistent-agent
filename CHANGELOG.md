@@ -1,5 +1,8 @@
 ## 2026-11-07
 
+### `workspace/` and `tmp/` renamed to `.workspace/` and `.tmp/`
+- Obsidian skips dot folders, so they aren't indexed when this repo is used as a vault. Move existing contents with `mv workspace .workspace` and `mv tmp .tmp`, then run `git worktree repair` in each clone that has worktrees.
+
 ### Auto memory lives in `memory/auto/`
 - `memory/feedback/` moved to `memory/auto/`. Move local feedback files there, give each auto memory frontmatter (`name`, `description`, `metadata.type`), and list them in a `memory/auto/MEMORY.md` index.
 - `autoMemoryDirectory` must point at the absolute path of `memory/auto`. It goes in the gitignored `.claude/settings.local.json` because it only accepts absolute or `~/` paths. Run `setup` to add it.

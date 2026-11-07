@@ -4,7 +4,7 @@
 
 Source is where the project lives: a git URL, or a local path the user works in.
 
-Clone `yes`: work in a clone at `workspace/<name>/`, made with `gh repo clone` or `git clone`. For a local Source, clone from its `origin` remote if it has one, so pushes and PRs go there and not into the user's checkout, then add Source as a `local` remote to fetch the user's local commits, and add Source's other remotes (e.g. `upstream`) under the same names. `cd` into the clone to run commands. This is the default for git repos, because it keeps your branches and changes apart from the user's work.
+Clone `yes`: work in a clone at `.workspace/<name>/`, made with `gh repo clone` or `git clone`. For a local Source, clone from its `origin` remote if it has one, so pushes and PRs go there and not into the user's checkout, then add Source as a `local` remote to fetch the user's local commits, and add Source's other remotes (e.g. `upstream`) under the same names. `cd` into the clone to run commands. This is the default for git repos, because it keeps your branches and changes apart from the user's work.
 
 Clone `no`: work directly at Source. Use it for folders the user wants changed in place, like a notes vault, and for folders that aren't git repos. The user is actively using these, so don't check out branches, stash, reset, or commit there unless asked. Source must be in `permissions.additionalDirectories` in `.claude/settings.local.json` so sessions can access it.
 
