@@ -7,7 +7,7 @@ Scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa b
 
 Then pull updates from each tool in `memory/tools.md` that has an Updates column entry. Ignore pieces of work that don't seem active. Add new tasks to the backlog, and update existing tasks if needed.
 
-Save this information in the daily note, and propose a plan for the day.
+Save this information in the daily note, and propose a plan for the day. Write every PR, issue, and Slack reference as a markdown link, in the daily note and in the summary you give the user.
 
 
 ## Slack SoD message

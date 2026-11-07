@@ -1,5 +1,8 @@
 ## 2026-11-07
 
+### Fixes
+- `start-of-day`: write every PR, issue, and Slack reference as a markdown link, in the daily note and in the chat summary.
+
 ### `dream` skill
 - New `memory/skills/dream.md` and `.claude/skills/dream/SKILL.md`: offline maintenance of `memory/auto/`, `tasks/`, and `daily-notes/` that corrects, adds, and consolidates them using past sessions as ground truth. Notes get `created`, `verified`, and `sources` properties.
 - New `bin/pa-transcripts`: prints user and assistant text from this repo's sessions, optionally after a timestamp and for one session.
