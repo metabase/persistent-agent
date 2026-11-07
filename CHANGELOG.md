@@ -1,5 +1,11 @@
 ## 2026-11-07
 
+### `memory/workspace.md` split into `memory/projects.md` and `memory/tools.md`
+- `memory/projects.md`: the Repositories section, now `## Projects`, plus "Creating commits and PRs". Columns are `Name | Source | Clone | Parallel`. `Source` replaces `URL` and can be a git URL or a local path the user works in. `Parallel worktrees` is renamed `Parallel`, and now also covers the user working on a local Source. New `Clone` column: `yes` works in a `workspace/<name>` clone (existing rows migrate as `yes`), `no` works in place at Source, which must be in `permissions.additionalDirectories` in `.claude/settings.local.json`. `Parallel` is empty for in place. Clones of a local Source clone from its `origin` remote, add Source as a `local` remote, and copy Source's other remotes (e.g. `upstream`).
+- `memory/tools.md`: the External tools section.
+- `memory/skills/self-modification.md`: contributing back cherry-picks from `local`, pushes to `origin`, and opens the PR with `--repo` set to upstream.
+- `CLAUDE.md` eager-loads both instead of `workspace.md`. `setup`, `work`, `start-of-day`, `memory` skills and README updated to match.
+
 ### `pa` is now a single long running session
 - `bin/pa`: passes `--continue --name pa` to `claude`, including for `pa update`, so `pa` works in one long session. Starts fresh when there is no previous session. Run `claude` directly in the repo for a new session, but note it then becomes the session `pa` resumes.
 - `.claude/settings.json`: sets `autoCompactEnabled: true` so the long session compacts instead of running out of context, even if a user turned auto-compact off.

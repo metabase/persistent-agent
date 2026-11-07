@@ -14,6 +14,7 @@ memory/
   archive/          # memories that are no longer relevant
   feedback/         # how the user wants you to work
   skills/           # instructions for agent skills
+  projects.md       # projects you work on, and how
+  tools.md          # external tools
   user.md           # who you act on behalf of
-  workspace.md      # repositories
 ```
