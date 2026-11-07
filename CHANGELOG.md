@@ -1,3 +1,41 @@
+## 2026-11-07
+
+### `pa save` pushes to `origin`
+- `bin/pa-save`: after committing, pushes the current branch to `origin`, also when there was nothing to commit. Only when an `upstream` remote exists, so a clone of the shared repo never pushes private tasks to it. Make sure `origin` is private.
+
+### Fixes
+- `start-of-day`: write every PR, issue, and Slack reference as a markdown link, in the daily note and in the chat summary.
+- `tasks`: when an external issue closes, archive every task that references it.
+- `tasks`: get timestamps from `date` for every changelog entry, never estimate them.
+- `memory`: the repo is an Obsidian vault, so folders that aren't notes get a dot prefix.
+- `tools.md`: `gh --attach` uploads images and videos into PR and issue bodies.
+- `self-modification`: commit each approved change on its own with its CHANGELOG line; leave follow-up fixes uncommitted for the user to fixup.
+
+### `dream` skill
+- New `memory/skills/dream.md` and `.claude/skills/dream/SKILL.md`: offline maintenance of `memory/auto/`, `tasks/`, and `daily-notes/` that corrects, adds, and consolidates them using past sessions as ground truth. Notes get `created`, `verified`, and `sources` properties.
+- New `bin/pa-transcripts`: prints user and assistant text from this repo's sessions, optionally after a timestamp and for one session.
+- Dreams log their changes in a `## Dream` section of the daily note, and set its `dreamed` property so the next dream knows where to start. A dream can create the daily note, so `modes` now runs start-of-day when today's note doesn't have it yet, not when the note is missing.
+- `pa save` also commits `memory/auto/` and `memory/archive/`, and commits only its paths, so other staged changes stay staged.
+- Dreams read transcripts in ~50KB chunks cut at day boundaries, and start from the oldest transcript on the first run. They check tasks against external state, and only propose changes to curated memory.
+
+### `workspace/` and `tmp/` renamed to `.workspace/` and `.tmp/`
+- Obsidian skips dot folders, so they aren't indexed when this repo is used as a vault. Move existing contents with `mv workspace .workspace` and `mv tmp .tmp`, then run `git worktree repair` in each clone that has worktrees.
+
+### Auto memory lives in `memory/auto/`
+- `memory/feedback/` moved to `memory/auto/`. Move local feedback files there, give each auto memory frontmatter (`name`, `description`, `metadata.type`), and list them in a `memory/auto/MEMORY.md` index.
+- `autoMemoryDirectory` must point at the absolute path of `memory/auto`. It goes in the gitignored `.claude/settings.local.json` because it only accepts absolute or `~/` paths. Run `setup` to add it.
+- `memory/skills/memory.md`: curated memories (`user.md`, `projects.md`, `tools.md`, `skills/`) vs learned memories (`auto/`). Dropped the rule against the auto memory `MEMORY.md` index.
+
+### `memory/workspace.md` split into `memory/projects.md` and `memory/tools.md`
+- `memory/projects.md`: the Repositories section, now `## Projects`, plus "Creating commits and PRs". Columns are `Name | Source | Clone | Parallel`. `Source` replaces `URL` and can be a git URL or a local path the user works in. `Parallel worktrees` is renamed `Parallel`, and now also covers the user working on a local Source. New `Clone` column: `yes` works in a `workspace/<name>` clone (existing rows migrate as `yes`), `no` works in place at Source, which must be in `permissions.additionalDirectories` in `.claude/settings.local.json`. `Parallel` is empty for in place. Clones of a local Source clone from its `origin` remote, add Source as a `local` remote, and copy Source's other remotes (e.g. `upstream`).
+- `memory/tools.md`: the External tools section.
+- `memory/skills/self-modification.md`: contributing back cherry-picks from `local`, pushes to `origin`, and opens the PR with `--repo` set to upstream.
+- `CLAUDE.md` eager-loads both instead of `workspace.md`. `setup`, `work`, `start-of-day`, `memory` skills and README updated to match.
+
+### `pa` is now a single long running session
+- `bin/pa`: passes `--continue --name pa` to `claude`, including for `pa update`, so `pa` works in one long session. Starts fresh when there is no previous session. Run `claude` directly in the repo for a new session, but note it then becomes the session `pa` resumes.
+- `.claude/settings.json`: sets `autoCompactEnabled: true` so the long session compacts instead of running out of context, even if a user turned auto-compact off.
+
 ## 2026-09-24
 
 ### Prompt audit for claude-opus-5-5

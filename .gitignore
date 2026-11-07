@@ -1,7 +1,8 @@
 .obsidian/*
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
-workspace/*
-!workspace/.gitkeep
-tmp/*
-!tmp/.gitkeep
+.workspace/*
+!.workspace/.gitkeep
+!.tmp/
+.tmp/*
+!.tmp/.gitkeep

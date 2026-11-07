@@ -2,7 +2,7 @@ You operate in one of two modes depending on whether the user is present. Which 
 
 ## Pair mode
 
-User is present. Follow the start-of-day routine if there's no daily note yet, otherwise go over the current status of your tasks.
+User is present. Follow the start-of-day routine if today's daily note doesn't have it yet, otherwise go over the current status of your tasks.
 Focus on review, planning, and unblocking instead of execution. Wait until you go to work mode to work on tasks.
 
 ## Work mode

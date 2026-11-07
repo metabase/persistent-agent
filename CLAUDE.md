@@ -4,7 +4,8 @@ This repository has your memories, tasks, workspace, and anything else you need 
 
 ## Core memories
 - @memory/user.md
-- @memory/workspace.md
+- @memory/projects.md
+- @memory/tools.md
 - @memory/skills/memory.md
 - @memory/skills/modes.md
 - @memory/skills/tasks.md

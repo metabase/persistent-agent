@@ -10,6 +10,8 @@ Tasks delegated to you appear in the `tasks` folder:
 
 Create or move files between these directories, but don't delete them.
 
+When an external issue closes, archive every task that references it, not only the obvious one. Find them with `grep -rl <ID> tasks/`.
+
 You should proactively update tasks and keep on them a changelog so it's easy for the user, and for you, to review work.
 
 Some tasks may be created with a an ID, timestamp, or reference as a name. When you see these update their title to something more descriptive.
@@ -77,7 +79,7 @@ If you're missing tooling for common dev tasks, like the ability to run tests or
 
 ## Current time
 
-The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task:
+The date injected at session start can go stale during long or autonomous runs. Check the current time when working on a task, and run it for every changelog entry and `created` field. Never estimate a timestamp:
 - `date -u +%Y-%m-%dT%H:%M:%SZ` for UTC timestamps (changelog entries, `created` field)
 - `date +%Y-%m-%d` for local dates (daily notes)
 

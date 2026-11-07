@@ -17,7 +17,7 @@ You can call `pa` it from any folder, but it will always run in this folder.
 If you want to run multiple `pa`, or if you don't want a global install, you can use the local `bin/pa` instead of globally installed `pa`.
 
 Then run `pa setup <your name>` to perform first-time user setup.
-It will ask you for the tools and repositories you want on your workspace, and you can answer in github shorthand like `metabase/metabase` or `your-org/your-repo`.
+It will ask you for the tools and projects you want it to use. Answer with github shorthand like `your-org/your-repo`, or local paths like `~/notes`.
 It will also tell you how to connect tools it needs to work.
 
 
@@ -35,13 +35,17 @@ You can also start `pa` on the work loop from the CLI with `pa work`.
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `work` again to continue autonomously.
 
+`pa` always resumes the last session and will automatically compact context as needed.
+Use `/clear` to wipe the session into a new one, and `/resume` to switch back to a previous session.
+
 
 ## CLI usage
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
 - `pa install`: installs `pa` into `$PATH`
-- `pa save`: git commit changes to tasks and daily notes
+- `pa save`: git commit changes to tasks, daily notes, and learned memories, and push to `origin`
 - `pa today`: show todays daily note
+- `pa transcripts [since] [session-id]`: print the text of past sessions, used by `/dream`
 - `pa tasks`: lists task status
 - `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
@@ -68,6 +72,7 @@ If you want to contribute them back to a shared `pa` repo, ask `pa` to help you 
 
 ## Remote control
 
-Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app.
+Use Claude's [remote control](https://code.claude.com/docs/en/remote-control) to drive a local `pa` session from the Code tab in the Claude mobile app. The session will be called `pa`.
 
 To enable it type `/remote-control` inside an existing session, or run `/config` and set **Enable Remote Control for all sessions** to `true`.
+

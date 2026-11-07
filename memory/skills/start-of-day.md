@@ -5,9 +5,9 @@ Keep notes for days in `daily-notes/` as `YYYY-MM-DD.md` to help your user start
 
 Scan `tasks/backlog/` and `tasks/todo/` for bare-text entries (created via `pa backlog` or `pa todo`) and normalize them to the task format.
 
-Then pull updates from each tool in workspace.md that has an Updates column entry. Ignore pieces of work that don't seem active. Add new tasks to the backlog, and update existing tasks if needed.
+Then pull updates from each tool in `memory/tools.md` that has an Updates column entry. Ignore pieces of work that don't seem active. Add new tasks to the backlog, and update existing tasks if needed.
 
-Save this information in the daily note, and propose a plan for the day.
+Save this information in the daily note, and propose a plan for the day. Write every PR, issue, and Slack reference as a markdown link, in the daily note and in the summary you give the user.
 
 
 ## Slack SoD message
@@ -24,4 +24,4 @@ SoD:
 
 ## Save
 
-Once the daily note, tasks, and Slack draft are done, run `pa save` (`bin/pa-save`) to commit the daily-note and task changes to git. It only stages `tasks/` and `daily-notes/`, so it won't sweep up unrelated working-tree changes.
+Once the daily note, tasks, and Slack draft are done, run `pa save` (`bin/pa-save`) to commit the daily-note, task, and learned memory changes to git. It only commits `tasks/`, `daily-notes/`, `memory/auto/`, and `memory/archive/`, so it won't sweep up other changes, staged or not. Then it pushes the current branch to `origin`, when there's an `upstream` remote.
