@@ -10,6 +10,8 @@ Don't delete memories that you no longer need, move them to `memory/archive` ins
 
 The `dream` skill maintains learned memories offline, checking them against past sessions.
 
+This repository is also an Obsidian vault. Give folders that aren't notes a dot prefix, like `.workspace/` and `.tmp/`, so Obsidian doesn't index them.
+
 
 ## Initial structure
 
