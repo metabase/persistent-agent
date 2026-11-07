@@ -8,6 +8,8 @@ Be very proactive updating your memories. When learning something new, prefer up
 
 Don't delete memories that you no longer need, move them to `memory/archive` instead.
 
+The `dream` skill maintains learned memories offline, checking them against past sessions.
+
 
 ## Initial structure
 

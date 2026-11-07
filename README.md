@@ -43,8 +43,9 @@ Use `/clear` to wipe the session into a new one, and `/resume` to switch back to
 
 `pa <anything>` will just start `pa` with `<anything>` as prompt, with a few exceptions that are plain scripts instead:
 - `pa install`: installs `pa` into `$PATH`
-- `pa save`: git commit changes to tasks and daily notes
+- `pa save`: git commit changes to tasks, daily notes, and learned memories
 - `pa today`: show todays daily note
+- `pa transcripts [since] [session-id]`: print the text of past sessions, used by `/dream`
 - `pa tasks`: lists task status
 - `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder

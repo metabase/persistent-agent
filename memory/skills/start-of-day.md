@@ -24,4 +24,4 @@ SoD:
 
 ## Save
 
-Once the daily note, tasks, and Slack draft are done, run `pa save` (`bin/pa-save`) to commit the daily-note and task changes to git. It only stages `tasks/` and `daily-notes/`, so it won't sweep up unrelated working-tree changes.
+Once the daily note, tasks, and Slack draft are done, run `pa save` (`bin/pa-save`) to commit the daily-note, task, and learned memory changes to git. It only commits `tasks/`, `daily-notes/`, `memory/auto/`, and `memory/archive/`, so it won't sweep up other changes, staged or not.

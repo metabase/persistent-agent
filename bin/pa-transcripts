@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+cd "$(dirname "$0")/.." || exit 1
+
+since="$1"
+dir="$HOME/.claude/projects/$(pwd -P | sed 's/[^a-zA-Z0-9]/-/g')"
+
+for f in "$dir"/${2:-*}.jsonl; do
+  out=$(jq -r --arg since "$since" '
+    select((.type == "user" or .type == "assistant")
+      and (.isSidechain | not) and (.isCompactSummary | not)
+      and .timestamp > $since)
+    | (.message.content
+       | if type == "string" then . else map(select(.type == "text") | .text) | join("\n") end) as $text
+    | select($text != "")
+    | "\(.timestamp) \(.type): \($text)"' "$f")
+  [ -n "$out" ] && printf '## %s\n\n%s\n\n' "$(basename "$f" .jsonl)" "$out"
+done
