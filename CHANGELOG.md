@@ -1,3 +1,11 @@
+## 2026-11-23
+
+### `cron` skill
+- New `memory/cron.md`: a `Name | When | Cron | Prompt` table of prompts to send to the main session on a schedule.
+- New `memory/skills/cron.md` and `.claude/skills/cron/SKILL.md`: sync the table to the session's `CronCreate` jobs, 30 minutes early to offset the scheduler's delay, on start, after edits, and daily through the `cron-sync` entry, which renews the 7-day expiry. Jobs carry a `[cron:<name>]` prefix, and a sync recreates only those.
+- `bin/pa`: the first running `pa` writes its pid to `.tmp/pa-main.pid` and execs `claude`, so the file holds the main session's `CLAUDE_PID`. New `bin/pa-main` exits 0 only in that session. Only the main session syncs.
+- `.claude/settings.json`: new `SessionStart` hook that tells the main session to sync. Restart `pa` to pick up both.
+
 ## 2026-11-07
 
 ### `pa save` pushes to `origin`

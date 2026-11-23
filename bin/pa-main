@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# exit 0 in the main pa session, the one whose CLAUDE_PID bin/pa wrote to the lock
+cd "$(dirname "$0")/.." || exit 1
+[ -n "$CLAUDE_PID" ] && [ "$(cat .tmp/pa-main.pid 2>/dev/null)" = "$CLAUDE_PID" ]
