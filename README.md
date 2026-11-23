@@ -35,6 +35,9 @@ You can also start `pa` on the work loop from the CLI with `pa work`.
 
 Say `pair` to get the current status from `pa`, unblock or work with it. Then say `work` again to continue autonomously.
 
+To send `pa` a prompt on a schedule, add it to [memory/cron.md](./memory/cron.md).
+The [cron](./memory/skills/cron.md) skill syncs the file to the session when `pa` starts and once a day, and the prompts fire while it runs.
+
 `pa` always resumes the last session and will automatically compact context as needed.
 Use `/clear` to wipe the session into a new one, and `/resume` to switch back to a previous session.
 
@@ -50,6 +53,7 @@ Use `/clear` to wipe the session into a new one, and `/resume` to switch back to
 - `pa backlog <text>`: adds a new task to the backlog folder
 - `pa todo <text>`: adds a new task to the todo folder
 - `pa update`: pull new changes to `pa` and merge them into the current branch
+- `pa main`: exits 0 only when run from the main `pa` session, the first one running, used by the cron hook and skill
 
 
 ## Permissions

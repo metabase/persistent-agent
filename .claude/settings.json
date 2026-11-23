@@ -7,6 +7,19 @@
     "defaultMode": "auto"
   },
   "autoCompactEnabled": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if \"$CLAUDE_PROJECT_DIR/bin/pa-main\"; then echo \"Main pa session started at $(date +%T). Sync cron jobs with the cron skill first.\"; fi"
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
     "linear@claude-plugins-official": true,

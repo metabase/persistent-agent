@@ -2,7 +2,7 @@
 cd "$(dirname "$0")/.." || exit 1
 
 if [ "$1" = "update" ]; then
-  exec claude --continue --name pa "/update"
+  set -- "/update"
 else
   script="$(dirname "$0")/pa-$1"
   if [ -x "$script" ]; then
@@ -11,4 +11,8 @@ else
   fi
 fi
 
-claude --continue --name pa "$@"
+# the first running pa is the main session, exec keeps the pid for claude
+lock=.tmp/pa-main.pid
+ps -o comm= -p "$(cat "$lock" 2>/dev/null)" 2>/dev/null | grep -q 'claude$' || echo $$ > "$lock"
+
+exec claude --continue --name pa "$@"
